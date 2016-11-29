@@ -5,7 +5,7 @@
 
 // load manifests
 // scripts
-require('./assets/scripts/index.js');
+require('./assets/index.js');
 
 // styles
 require('./assets/styles/index.scss');
@@ -13,3 +13,5 @@ require('./assets/styles/index.scss');
 // attach jQuery globally
 require('expose?$!jquery');
 require('expose?jQuery!jquery');
+
+require('expose?getFormFields!./lib/get-form-fields.js');

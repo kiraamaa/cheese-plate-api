@@ -11,6 +11,7 @@
    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
    <meta name="author" content="">
 
+
    <title>Cheese Plate Generator</title>
 
    <!-- Bootstrap core CSS -->
@@ -93,9 +94,9 @@
 
          <li class="menuItem"><a href="#cheeseplate">My Cheese Plates</a></li>
          <!--<li class="menuItem"><a href="#useit">Cheese Library</a></li>-->
-         <li class="menuItem"><a href="#screen">Cheese Library</a></li>
+         <li class="menuItem"><a href="#screen">Make A New Plate</a></li>
          <!--<li class="menuItem"><a href="#credits">Credits</a></li>-->
-         <li class="menuItem"><a href="#contact">Sign in</a></li>
+         <li class="menuItem"><a href="#" data-toggle="modal" data-target="#signInModal">Sign in</a></li>
        </ul>
      </div>
 
@@ -345,7 +346,120 @@
    </div>
  </div>-->
 
- <!-- Credits -->
+
+ <!-- Quiz Button -->
+ <div id="takequiz" class="banner">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+       <h2>Create a new cheese plate</h2>
+       <p><a class="btn btn-primary view" role="button" data-toggle="modal" data-target="#cheeseModal">Make my cheese plate</a></p>
+       <div id="cheeseModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-body">
+                   <img src="//placehold.it/1000x600" class="img-responsive">
+               </div>
+           </div>
+         </div>
+       </div>
+      </div>
+     </div>
+   </div>
+ </div>
+
+
+ <!-- Sign up -->
+ <div id="sign-up" class="content-section-a">
+   <div class="container">
+     <div class="row">
+
+     <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+       <h2>Sign Up</h2>
+       <p class="lead" style="margin-top:0">Create an account to get started.</p>
+     </div>
+
+     <form class="sign-up-form" role="form" action="" method="post" >
+       <div class="col-md-6">
+         <div class="form-group">
+           <label for="InputEmail">Your Email</label>
+           <div class="input-group">
+             <input type="email" class="form-control" name="credentials[email]" id="InputEmail" placeholder="Enter Email" required>
+             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+           </div>
+         </div>
+
+
+         <div class="form-group">
+           <label for="InputPassword">Your Password</label>
+           <div class="input-group">
+             <input type="password" class="form-control" id="InputPassword" name="credentials[password]" placeholder="Enter Password" required  >
+             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+           </div>
+         </div>
+
+         <div class="form-group">
+           <label for="ConfirmPassword">Confirm Password</label>
+           <div class="input-group">
+             <input type="password" class="form-control" id="InputConfirmPassword" name="credentials[password_confirmation]" placeholder="Confirm Password" required  >
+             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+           </div>
+         </div>
+
+
+
+         <input type="submit" name="submit" id="submit" value="Submit" class="btn wow tada btn-embossed btn-primary pull-right">
+
+         <p id="sign-in-text">Already have an account? Sign in <a href="#" data-toggle="modal" data-target="#signInModal">here</a>.</p>
+       </div>
+     </form>
+
+<!-- Sign in modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sign in</h4>
+      </div>
+      <div class="modal-body">
+        <form class="sign-in-form">
+          <div class="form-group">
+            <input type="email" name="credentials[email]" class="form-control" id="sign-in-email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+     <hr class="featurette-divider hidden-lg">
+       <div class="col-md-5 col-md-push-1 address">
+         <address>
+         <h3>Contact Kira</h3>
+         <p class="lead"><a href="https://www.google.com/maps/place/General+Assembly+Boston/@42.3530393,-71.0596306,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370a437efdfcb:0x8ad199010ab6874a!8m2!3d42.3530393!4d-71.0574419">General Assembly<br>
+         Boston, MA</a><br>
+         Phone: 857-277-2977<br>
+         </address>
+
+         <h3>Follow Kira</h3>
+           <li class="social">
+           <a href="https://www.facebook.com/KiraMaclean"><i class="fa fa-facebook-square fa-size"> </i></a>
+           <a href="https://twitter.com/kiraamaa"><i class="fa  fa-twitter-square fa-size"> </i> </a>
+           <a href="https://www.instagram.com/kiraamaa/?hl=en"><i class="fa fa-instagram fa-size"> </i></a>
+           <a href="https://www.linkedin.com/in/kira-maclean"><i class="fa fa-linkedin-square fa-size"> </i> </a>
+           </li>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- Quiz -->
  <!--<div id="credits" class="content-section-a">
    <div class="container">
      <div class="row">
@@ -405,109 +519,6 @@
      </div>
    </div>
  </div>-->
-
- <!-- Banner Download -->
- <!--<div id="takequiz" class="banner">
-   <div class="container">
-     <div class="row">
-       <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-       <h2>Download Free</h2>
-       <p class="lead" style="margin-top:0">Pay with a Tweet</p>
-       <p><a class="btn btn-embossed btn-primary view" role="button">Free Download</a></p>
-      </div>
-     </div>
-   </div>
- </div>-->
-
- <!-- Sign up -->
- <div id="sign-up" class="content-section-a">
-   <div class="container">
-     <div class="row">
-
-     <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-       <h2>Sign Up</h2>
-       <p class="lead" style="margin-top:0">Create an account to get started.</p>
-     </div>
-
-     <form role="form" action="" method="post" >
-       <div class="col-md-6">
-         <div class="form-group">
-           <label for="InputEmail">Your Email</label>
-           <div class="input-group">
-             <input type="email" class="form-control" name="credentials[email]" id="InputEmail" placeholder="Enter Email" required>
-             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-           </div>
-         </div>
-
-
-         <div class="form-group">
-           <label for="InputPassword">Your Password</label>
-           <div class="input-group">
-             <input type="password" class="form-control" id="InputPassword" name="credentials[password]" placeholder="Enter Password" required  >
-             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-           </div>
-         </div>
-
-         <div class="form-group">
-           <label for="ConfirmPassword">Confirm Password</label>
-           <div class="input-group">
-             <input type="password" class="form-control" id="InputPassword" name="credentials[password_confirmation]" placeholder="Confirm Password" required  >
-             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-           </div>
-         </div>
-
-
-
-         <input type="submit" name="submit" id="submit" value="Submit" class="btn wow tada btn-embossed btn-primary pull-right">
-
-         <p id="sign-in-text">Already have an account? Sign in <a href="#" data-toggle="modal" data-target="#signInModal">here</a>.</p>
-       </div>
-     </form>
-
-<!-- Sign in modal -->
-<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Sign in</h4>
-      </div>
-      <div class="modal-body">
-        <form class="sign-in-form">
-          <div class="form-group">
-            <input type="email" name="credentials[email]" class="form-control" id="sign-in-email" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-     <hr class="featurette-divider hidden-lg">
-       <div class="col-md-5 col-md-push-1 address">
-         <address>
-         <h3>Contact Kira</h3>
-         <p class="lead"><a href="https://www.google.com/maps/place/General+Assembly+Boston/@42.3530393,-71.0596306,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370a437efdfcb:0x8ad199010ab6874a!8m2!3d42.3530393!4d-71.0574419">General Assembly<br>
-         Boston, MA</a><br>
-         Phone: 857-277-2977<br>
-         </address>
-
-         <h3>Follow Kira</h3>
-           <li class="social">
-           <a href="https://www.facebook.com/KiraMaclean"><i class="fa fa-facebook-square fa-size"> </i></a>
-           <a href="https://twitter.com/kiraamaa"><i class="fa  fa-twitter-square fa-size"> </i> </a>
-           <a href="https://www.instagram.com/kiraamaa/?hl=en"><i class="fa fa-instagram fa-size"> </i></a>
-           <a href="https://www.linkedin.com/in/kira-maclean"><i class="fa fa-linkedin-square fa-size"> </i> </a>
-           </li>
-       </div>
-     </div>
-   </div>
- </div>
 
 
 
