@@ -85,7 +85,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-       <a class="navbar-brand" href="#home">Cheese Plate Generator</a>
+       <a class="navbar-brand" href="#home">Cheese Plates</a>
      </div>
 
      <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
@@ -263,7 +263,7 @@
    </div>-->
 
  <!-- Cheese Library -->
- <div id="screen" class="content-section-b">
+ <!--<div id="screen" class="content-section-b">
        <div class="container">
          <div class="row" >
       <div class="col-md-6 col-md-offset-3 text-center wrap_title ">
@@ -274,7 +274,7 @@
        <div class="row wow bounceInUp" >
              <div id="owl-demo" class="owl-carousel">
 
-       <a href="img/cheeselibrary/gouda.jpg"" class="image-link">
+       <a href="img/cheeselibrary/gouda.jpg" class="image-link">
          <div class="item">
            <img  class="img-responsive img-rounded" src="assets/styles/img/cheeselibrary/gouda.jpg" alt="Owl Image">
          </div>
@@ -306,7 +306,7 @@
 
        <a href="img/slide/3.png" class="image-link">
          <div class="item">
-           <img  class="img-responsive img-rounded" src="assets/styles/img/slide/3.png" alt="Owl Image">
+           <img class="img-responsive img-rounded" src="assets/styles/img/slide/3.png" alt="Owl Image">
          </div>
        </a>
              </div>
@@ -314,7 +314,7 @@
        </div>
 
 
- </div>
+ </div>-->
 
  <!--<div  class="content-section-c ">
    <div class="container">
@@ -432,33 +432,61 @@
      <form role="form" action="" method="post" >
        <div class="col-md-6">
          <div class="form-group">
-           <label for="InputName">Your Name</label>
+           <label for="InputEmail">Your Email</label>
            <div class="input-group">
-             <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+             <input type="email" class="form-control" name="credentials[email]" id="InputEmail" placeholder="Enter Email" required>
              <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
            </div>
          </div>
 
-         <div class="form-group">
-           <label for="InputEmail">Your Email</label>
-           <div class="input-group">
-             <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
-             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-           </div>
-         </div>
 
          <div class="form-group">
            <label for="InputPassword">Your Password</label>
            <div class="input-group">
-             <input type="password" class="form-control" id="InputPassword" name="InputPassword" placeholder="Enter Password" required  >
+             <input type="password" class="form-control" id="InputPassword" name="credentials[password]" placeholder="Enter Password" required  >
              <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
            </div>
          </div>
 
+         <div class="form-group">
+           <label for="ConfirmPassword">Confirm Password</label>
+           <div class="input-group">
+             <input type="password" class="form-control" id="InputPassword" name="credentials[password_confirmation]" placeholder="Confirm Password" required  >
+             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+           </div>
+         </div>
+
+
+
          <input type="submit" name="submit" id="submit" value="Submit" class="btn wow tada btn-embossed btn-primary pull-right">
-<p id="sign-in-text">Already have an account? Sign in <a href=#signInModal data-toggle="modal" data-target="signInModal">here</a>.</p>
+
+         <p id="sign-in-text">Already have an account? Sign in <a href="#" data-toggle="modal" data-target="#signInModal">here</a>.</p>
        </div>
      </form>
+
+<!-- Sign in modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sign in</h4>
+      </div>
+      <div class="modal-body">
+        <form class="sign-in-form">
+          <div class="form-group">
+            <input type="email" name="credentials[email]" class="form-control" id="sign-in-email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
 
      <hr class="featurette-divider hidden-lg">
        <div class="col-md-5 col-md-push-1 address">

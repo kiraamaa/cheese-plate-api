@@ -4,12 +4,12 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
 ;( function( window ) {
-	
+
 	'use strict';
 
 	var transEndEventNames = {
@@ -23,7 +23,7 @@
 		support = { transitions : Modernizr.csstransitions };
 
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -95,7 +95,7 @@
 					this.removeEventListener( transEndEventName, onEndTransitionFn );
 				}
 				self.isAnimating = false;
-				
+
 				// callback
 				if( self.expanded ) {
 					// remove class active (after closing)
@@ -115,10 +115,10 @@
 		else {
 			onEndTransitionFn();
 		}
-		
+
 		// add/remove class "open" to the button wraper
 		this.el.style.height = this.expanded ? this.elH + 'px' : this.contentEl.offsetHeight + 'px';
-		
+
 		if( this.expanded ) {
 			classie.removeClass( this.el, 'open' );
 		}
