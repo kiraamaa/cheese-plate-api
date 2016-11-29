@@ -10,12 +10,12 @@ My ideal user base would be the 25-55 age range, namely individuals who are curi
 
 ## User Stories
 
-As a user I want to be able to determine my cheese flavor preferences.
-As a user I want to be able to see a cheese plate in line with my preferences.
-As a user I want to be able to see the individual cheese with a description.
-As a user I want to be able to remove cheeses from my cheese plate.
-As a user I want to be able to add cheeses to my cheese plate.
-As a user I want to be able to save cheese plates for future reference.
+As a user I want to be able to determine my cheese flavor preferences.<br>
+As a user I want to be able to see a cheese plate in line with my preferences.<br>
+As a user I want to be able to see the individual cheese with a description.<br>
+As a user I want to be able to remove cheeses from my cheese plate.<br>
+As a user I want to be able to add cheeses to my cheese plate.<br>
+As a user I want to be able to save cheese plates for future reference.<br>
 
 ## Planning/ERD
 
