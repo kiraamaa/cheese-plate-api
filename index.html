@@ -1,163 +1,378 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!-- FlatFy Theme - Andrea Galanti /-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+   <meta name="description">
+   <meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+   <title>Cheese Plate Generator</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="./assets/styles/grayscale/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="./assets/styles/grayscale/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+   <!-- Bootstrap core CSS -->
+   <link href="assets/styles/index.scss" rel="stylesheet">
+   <link href="assets/styles/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link href="./assets/styles/grayscale/css/grayscale.min.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+   <!-- Custom Google Web Font -->
+   <link href="assets/styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 
+
+   <!-- Custom CSS-->
+   <link href="assets/styles/css/general.css" rel="stylesheet">
+
+  <!-- Owl-Carousel -->
+ <link href="assets/styles/css/custom.css" rel="stylesheet">
+ <link href="assets/styles/css/owl.carousel.css" rel="stylesheet">
+ <link href="assets/styles/css/owl.theme.css" rel="stylesheet">
+ <link href="assets/styles/css/style.css" rel="stylesheet">
+ <link href="assets/styles/css/animate.css" rel="stylesheet">
+
+ <!-- Magnific Popup core CSS file -->
+ <link rel="stylesheet" href="assets/styles/css/magnific-popup.css">
+
+ <script src="assets/styles/js/modernizr-2.8.3.min.js"></script>
+
+ <!-- Modernizr /-->
+ <!--[if IE 9]>
+   <script src="js/PIE_IE9.js"></script>
+ <![endif]-->
+ <!--[if lt IE 9]>
+   <script src="js/PIE_IE678.js"></script>
+ <![endif]-->
+
+ <!--[if lt IE 9]>
+   <script src="js/html5shiv.js"></script>
+ <![endif]-->
+<script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
+ <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="home">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status"></div>
+  </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Download</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
+  <!-- FullScreen -->
+    <div class="intro-header">
+    <div class="col-xs-12 text-center abcen1">
+      <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Cheese Plate Generator</h1>
+      <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Discover your new favorite cheese plate</h3>
+      <ul class="list-inline intro-social-buttons">
+        <li id="signup"><a href="#createplate" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Begin</span></a>
+        </li>
+      </ul>
+    </div>
         <!-- /.container -->
-    </nav>
+    <div class="col-xs-12 text-center abcen wow fadeIn">
+      <div class="button_down ">
+        <!--<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#createplate"> <img class="img_scroll" src="assets/styles/img/icon/circle.png" alt=""> </a>-->
+      </div>
+    </div>
+    </div>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Grayscale</h1>
-                        <p class="intro-text">A free, responsive, one page Bootstrap theme.
-                            <br>Created by Start Bootstrap.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
+  <!-- NavBar-->
+  <nav class="navbar-default stuckMenu" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#home">Cheese Plates</a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+
+          <li class="menuItem"><a href="#cheeseplate">My Cheese Plates</a></li>
+          <!--<li class="menuItem"><a href="#useit">Cheese Library</a></li>-->
+          <li class="menuItem"><a href="#screen">Create A Cheese Plate</a></li>
+          <!--<li class="menuItem"><a href="#credits">Credits</a></li>-->
+          <li class="menuItem"><a href="#" data-toggle="modal" data-target="#myModal">Sign Up</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- My Cheese Plates -->
+  <div id="cheeseplate" class="content-section-b" style="border-top: 0">
+    <div class="container">
+
+      <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+        <h2>My Cheese Plates</h2>
+        <p class="lead" style="margin-top:0">View and edit your saved cheese plates here.</p>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-4 wow fadeInDown text-center">
+          <img src="assets/styles/img/icon/tweet.svg" alt="Generic placeholder image">
+          <h3>Nutty</h3>
+          <p class="lead">Nutty cheeses are fairly straightforward in the sense that the flavor is reminiscent of nuts. Common nutty flavors in cheese include walnuts and hazelnuts.</p>
+
+          <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-sm-4 wow fadeInDown text-center">
+          <img src="assets/styles/img/icon/picture.svg" alt="Generic placeholder image">
+           <h3>Piquant</h3>
+           <p class="lead">Piquant is similar to tangy, but refers to the way a "sharp," aged acidic cheese makes your mouth feel. </p>
+           <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-sm-4 wow fadeInDown text-center">
+          <img src="assets/styles/img/icon/retina.svg" alt="Generic placeholder image">
+           <h3>Buttery</h3>
+          <p class="lead">"Buttery" cheeses tend to be rich and creamy, with a high butterfat content and a subtle sweetness.</p>
+          <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+      </div><!-- /.row -->
+    </div>
+  </div>
+
+  <!-- Cheese Plate Maker -->
+  <div id="createplate" class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+        <h2>Create a new cheese plate</h2>
+        <p class="makebutton"><a class="btn btn-primary view" role="button" data-toggle="modal" data-target="#cheeseModal">Make my cheese plate</a></p>
+        <div id="cheeseModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="//placehold.it/1000x600" class="img-responsive">
                 </div>
             </div>
+          </div>
         </div>
-    </header>
+       </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Grayscale</h2>
-                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+  <!-- Sign up modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Sign up</h4>
+        </div>
+        <div class="modal-body">
+          <form class="sign-up-form">
+            <div class="form-group">
+              <input type="email" name="credentials[email]" class="form-control" id="sign-up-email" placeholder="Email">
             </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-                </div>
+            <div class="form-group">
+              <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
+            <div class="form-group">
+              <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword1" placeholder="Confirm password">
             </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <!-- Map Section -->
-    <div id="map"></div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Your Website 2016</p>
+  <!-- Sign up -->
+  <!--<div id="sign-up" class="content-section-a">
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+        <h2>Sign Up</h2>
+        <p class="lead" style="margin-top:0">Create an account to get started.</p>
+      </div>
+
+      <form class="sign-up-form">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="InputEmail">Your Email</label>
+            <div class="input-group">
+              <input type="email" name="credentials[email]" class="form-control" id="sign-up-email" placeholder="Enter Email" required>
+              <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="InputPassword">Your Password</label>
+            <div class="input-group">
+              <input type="password" name="credentials[password]" class="form-control" id="input-password" placeholder="Enter Password" required  >
+              <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="ConfirmPassword">Confirm Password</label>
+            <div class="input-group">
+              <input type="password" name="credentials[password_confirmation]" class="form-control" id="input-password" placeholder="Confirm Password" required  >
+              <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+            </div>
+          </div>
+
+          <button id="on-form-submit" class="btn wow tada btn-primary btn-embossed pull-right">Submit</button>
+
+          <p id="sign-in-text">Already have an account? Sign in <a href="#" data-toggle="modal" data-target="#signInModal">here</a>.</p>
         </div>
-    </footer>
+      </form>-->
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
+ <!-- Sign in modal -->
+ <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h4 class="modal-title">Sign in</h4>
+       </div>
+       <div class="modal-body">
+         <form class="sign-in-form">
+           <div class="form-group">
+             <input type="email" name="credentials[email]" class="form-control" id="sign-in-email" placeholder="Email">
+           </div>
+           <div class="form-group">
+             <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
+           </div>
+           <button id="form-button-on" class="btn btn-default">Submit</button>
+         </form>
+       </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+     </div>
+   </div>
+ </div>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+      <!--<hr class="featurette-divider hidden-lg">
+        <div class="col-md-5 col-md-push-1 address">
+          <address>
+          <h3>Contact Kira</h3>
+          <p class="lead"><a href="https://www.google.com/maps/place/General+Assembly+Boston/@42.3530393,-71.0596306,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370a437efdfcb:0x8ad199010ab6874a!8m2!3d42.3530393!4d-71.0574419">General Assembly<br>
+          Boston, MA</a><br>
+          Phone: 857-277-2977<br>
+          </address>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+          <h3>Follow Kira</h3>
+            <li class="social">
+            <a href="https://www.facebook.com/KiraMaclean"><i class="fa fa-facebook-square fa-size"> </i></a>
+            <a href="https://twitter.com/kiraamaa"><i class="fa  fa-twitter-square fa-size"> </i> </a>
+            <a href="https://www.instagram.com/kiraamaa/?hl=en"><i class="fa fa-instagram fa-size"> </i></a>
+            <a href="https://www.linkedin.com/in/kira-maclean"><i class="fa fa-linkedin-square fa-size"> </i> </a>
+            </li>
+        </div>
+      </div>
+    </div>
+  </div>-->
 
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+  <!-- Quiz -->
+  <div id="credits" class="content-section-a">
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+        <h2>Credits</h2>
+        <p class="lead" style="margin-top:0">A special thanks to Death.</p>
+       </div>
+
+        <div class="col-sm-6  block wow bounceIn">
+          <div class="row">
+            <div class="col-md-4 box-icon rotate">
+              <i class="fa fa-desktop fa-4x "> </i>
+            </div>
+            <div class="col-md-8 box-ct">
+              <h3> Bootstrap </h3>
+              <p> Lorem ipsum dolor sit ametconsectetur adipiscing elit. Suspendisse orci quam. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 block wow bounceIn">
+          <div class="row">
+            <div class="col-md-4 box-icon rotate">
+            <i class="fa fa-picture-o fa-4x "> </i>
+            </div>
+            <div class="col-md-8 box-ct">
+            <h3> Owl-Carousel </h3>
+            <p> Nullam mo  arcu ac molestie scelerisqu vulputate, molestie ligula gravida, tempus ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row tworow">
+        <div class="col-sm-6  block wow bounceIn">
+          <div class="row">
+            <div class="col-md-4 box-icon rotate">
+              <i class="fa fa-magic fa-4x "> </i>
+            </div>
+            <div class="col-md-8 box-ct">
+              <h3> Codrops </h3>
+              <p> Lorem ipsum dolor sit ametconsectetur adipiscing elit. Suspendisse orci quam. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 block wow bounceIn">
+          <div class="row">
+            <div class="col-md-4 box-icon rotate">
+            <i class="fa fa-heart fa-4x "> </i>
+            </div>
+            <div class="col-md-8 box-ct">
+            <h3> Lorem Ipsum</h3>
+            <p> Nullam mo  arcu ac molestie scelerisqu vulputate, molestie ligula gravida, tempus ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="assets/styles/js/jquery-1.10.2.js"></script>
+    <script src="assets/styles/js/bootstrap.js"></script>
+    <script src="assets/styles/js/owl.carousel.js"></script>
+  <script src="assets/styles/js/script.js"></script>
+  <!-- StikyMenu -->
+  <script src="assets/styles/js/stickUp.min.js"></script>
+  <script type="text/javascript">
+    jQuery(function($) {
+    $(document).ready( function() {
+      $('.navbar-default').stickUp();
+
+    });
+    });
+
+  </script>
+  <!-- Smoothscroll -->
+  <script type="text/javascript" src="assets/styles/js/jquery.corner.js"></script>
+  <script src="assets/styles/js/wow.min.js"></script>
+  <script>
+   new WOW().init();
+ </script>
+  <script src="assets/styles/js/classie.js"></script>
+  <script src="assets/styles/js/uiMorphingButton_inflow.js"></script>
+  <!-- Magnific Popup core JS file -->
+  <script src="assets/styles/js/jquery.magnific-popup.js"></script>
+
 
 </body>
 
