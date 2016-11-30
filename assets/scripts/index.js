@@ -14,5 +14,5 @@ const authEvents = require('../auth/events.js');
 $(() => {
   console.log('adding event handlers');
   authEvents.addHandlers();
-  // gameEvents.addHandlers();
+  $('.dropdown-toggle').dropdown();
 });
