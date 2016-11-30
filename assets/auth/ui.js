@@ -12,7 +12,7 @@ const success = (data) => {
 // };
 
 const failure = (error) => {
-  console.error(error);
+  console.error('failing');
 };
 
 // const changePassword = () => {

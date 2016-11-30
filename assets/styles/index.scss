@@ -1,2 +1,159 @@
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$body-background-color-left: #ffb3ff;
+$body-background-color-right: #b3ffff;
+$background-color: #808080;
+$font-color: #fff;
+$current-player-color: #000;
+$marker-color: #79687f;
+
+
+
+body {
+  background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/intro/intro1.jpg) no-repeat center center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.navbar-custom {
+  background-color: $font-color;
+}
+
+.navbar-brand {
+  color: $background-color;
+  font-family: 'Rubik', sans-serif;
+}
+
+.dropdown-toggle {
+  color: $background-color;
+  font-family: 'Rubik', sans-serif;
+}
+
+.sign-up-button {
+  background: none;
+  border: 0;
+  font-family: 'Rubik', sans-serif;
+  padding: 0;
+}
+
+.sign-in-button {
+  background: none;
+  border: 0;
+  font-family: 'Rubik', sans-serif;
+  padding: 0;
+}
+
+.change-password-button {
+  background: none;
+  border: 0;
+  font-family: 'Rubik', sans-serif;
+  padding: 0;
+}
+
+.sign-out-button {
+  background: none;
+  border: 0;
+  font-family: 'Rubik', sans-serif;
+  padding: 0;
+}
+
+.get-stats-button {
+  background: none;
+  border: 0;
+  font-family: 'Rubik', sans-serif;
+  padding: 0;
+}
+
+table {
+  color: $font-color;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  width: 551px;
+}
+
+td {
+  border: 2px solid $font-color;
+  -webkit-border-radius: 10px;
+  color: $font-color;
+  font-size: 120px;
+  height: 175px;
+  text-align: center;
+  width: 175px;
+}
+
+.players {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 20px 10px 10px;
+  text-align: left;
+  width: 511px;
+
+  div {
+    color: $current-player-color;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    padding-right: 25px;
+    }
+}
+
+.button-custom {
+  color: $current-player-color;
+  float: right;
+  font-family: 'Rubik', sans-serif;
+}
+
+.current-player {
+  color: $current-player-color;
+  font-family: 'Rubik', sans-serif;
+}
+
+.x {
+  color: $current-player-color;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+.o {
+  color: $current-player-color;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+.stats-message {
+  float: right;
+  position: absolute;
+  right: 100px;
+  top: 175px;
+}
+
+.win-message {
+  font-size: 20px;
+  padding: 100px;
+  position: fixed;
+  right: 60px;
+  top: 200px;
+}
+
+.sign-message {
+  position: fixed;
+  right: 45px;
+  top: 150px;
+}
+
+.new-message {
+  font-size: 14px;
+  position: fixed;
+  right: 45px;
+  top: 150px;
+}
