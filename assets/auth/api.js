@@ -2,19 +2,20 @@
 
 const app = require('../app.js');
 
-// const signUp = (data) =>
-//   $.ajax({
-//     url: app.host + '/sign-up',
-//     method: 'POST',
-//     data,
-//   });
-
-const signIn = (data) =>
+const signUp = (data) =>
   $.ajax({
-    url: app.host + '/sign-in',
+    // url: app.host + '/sign-up',
+    url: 'http://localhost:4741/sign-up',
     method: 'POST',
     data,
   });
+
+// const signIn = (data) =>
+//   $.ajax({
+//     url: app.host + '/sign-in',
+//     method: 'POST',
+//     data,
+//   });
 //
 // const signOut = () =>
 //   $.ajax({
@@ -37,7 +38,7 @@ const signIn = (data) =>
 
 module.exports = {
   // signUp,
-  signIn,
+  signUp,
   // signOut,
   // changePassword,
 };

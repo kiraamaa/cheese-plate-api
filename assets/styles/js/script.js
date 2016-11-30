@@ -27,8 +27,8 @@ $(document).ready(function() {
 		// $('.image-link').magnificPopup({type:'image'});
 
 
-		//SmothScroll
-		$('a[href*=#]').click(function() {
+	//	SmothScroll
+		$('a[href*="#"]').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 			&& location.hostname == this.hostname) {
 					var $target = $(this.hash);

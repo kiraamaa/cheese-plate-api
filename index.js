@@ -5,7 +5,7 @@
 
 // load manifests
 // scripts
-require('./assets/index.js');
+require('./assets/scripts/index.js');
 
 // styles
 require('./assets/styles/index.scss');
@@ -14,4 +14,4 @@ require('./assets/styles/index.scss');
 require('expose?$!jquery');
 require('expose?jQuery!jquery');
 
-require('expose?getFormFields!./lib/get-form-fields.js');
+// require('expose?getFormFields!./lib/get-form-fields.js');

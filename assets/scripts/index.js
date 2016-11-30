@@ -4,14 +4,15 @@
 // var example = require('./example');
 
 // use require without a reference to ensure a file is bundled
-require('./scripts/example.js');
+// require('./scripts/example.js');
 
-const authEvents = require('./auth/events.js');
+const authEvents = require('../auth/events.js');
 // const gameEvents = require('./game/events.js');
 
 
 // On document ready
 $(() => {
+  console.log('adding event handlers');
   authEvents.addHandlers();
   // gameEvents.addHandlers();
 });

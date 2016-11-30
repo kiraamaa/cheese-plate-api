@@ -4,26 +4,26 @@ const getFormFields = require(`../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
-// const onSignUp = function (event) {
-//   event.preventDefault();
-//   // let data = getFormFields(event.target);
-//   // api.signUp(data)
-//   //   .then(ui.success)
-//   //   .catch(ui.failure);
-//   console.log('click');
-// };
-
-const onSignIn = function (event) {
+const onSignUp = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
-  api.signIn(data)
-    .then(ui.signInSuccess)
+  api.signUp(data)
+    .then(ui.success)
     .catch(ui.failure);
   console.log('click');
+};
+
+// const onSignIn = function (event) {
+//   event.preventDefault();
+//   let data = getFormFields(event.target);
+//   api.signIn(data)
+//     .then(ui.signInSuccess)
+//     .catch(ui.failure);
+//   console.log('click');
   // $('#myModal2').modal("hide");
   // $('.sign-message').hide();
   // $('.new-message').show();
-};
+//};
 //
 // const onSignOut = function (event) {
 //   event.preventDefault();
@@ -43,7 +43,7 @@ const onSignIn = function (event) {
 
 const addHandlers = () => {
   // $('.sign-up-form').on('submit', onSignUp);
-  $('.sign-in-form').on('submit', onSignIn);
+  $('#on-form-submit').on('click', onSignUp);
 //   $('.sign-out-button').on('click', onSignOut);
 //   $('.change-password-form').on('submit', onChangePassword);
 };
