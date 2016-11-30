@@ -10,7 +10,7 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.success)
     .catch(ui.failure);
-  console.log('click');
+  console.log(data);
 };
 
 // const onSignIn = function (event) {
