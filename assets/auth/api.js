@@ -10,35 +10,35 @@ const signUp = (data) =>
     data,
   });
 
-// const signIn = (data) =>
-//   $.ajax({
-//     url: app.host + '/sign-in',
-//     method: 'POST',
-//     data,
-//   });
-//
-// const signOut = () =>
-//   $.ajax({
-//     url: app.host + '/sign-out/' + app.user.id,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: "Token token=" + app.user.token,
-//     }
-//   });
-//
-// const changePassword = (data) =>
-//   $.ajax({
-//     url: app.host + '/change-password/' + app.user.id,
-//     method: 'PATCH',
-//     data,
-//     headers: {
-//       Authorization: "Token token=" + app.user.token,
-//     }
-//   });
+const signIn = (data) =>
+  $.ajax({
+    url: app.host + '/sign-in',
+    method: 'POST',
+    data,
+  });
+
+const signOut = () =>
+  $.ajax({
+    url: app.host + '/sign-out/' + app.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: "Token token=" + app.user.token,
+    }
+  });
+
+const changePassword = (data) =>
+  $.ajax({
+    url: app.host + '/change-password/' + app.user.id,
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: "Token token=" + app.user.token,
+    }
+  });
 
 module.exports = {
-  // signUp,
   signUp,
-  // signOut,
-  // changePassword,
+  signUp,
+  signOut,
+  changePassword,
 };
