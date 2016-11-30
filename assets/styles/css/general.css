@@ -958,6 +958,10 @@ color: #ECEBEB;
 	background: #e85657;
 }
 
+.makebutton {
+  margin: 20px;
+}
+
 .morph-button-sidebar.open .morph-content {
 	top: 0 !important;
 	left: 0 !important;

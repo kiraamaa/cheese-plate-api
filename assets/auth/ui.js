@@ -5,11 +5,11 @@
 const success = (data) => {
   console.log(data);
 };
-//
-// const signInSuccess = (data) => {
-//   // console.log(data);
-//   app.user = data.user;
-// };
+
+const signInSuccess = (data) => {
+  // console.log(data);
+  app.user = data.user;
+};
 
 const failure = (error) => {
   console.error(error);
@@ -28,7 +28,7 @@ const failure = (error) => {
 module.exports = {
   failure,
   success,
-  // signInSuccess,
+  signInSuccess,
   // changePassword,
   // signOutSuccess
 };
