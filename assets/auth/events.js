@@ -34,7 +34,7 @@ const onSignOut = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault();
-  let data = getFormFields(this);
+  let data = getFormFields(event.target);
   api.changePassword(data)
     .then(ui.success)
     .catch(ui.failure);
@@ -45,7 +45,7 @@ const addHandlers = () => {
   $('#myModal').on('submit', onSignUp);
   $('#myModal2').on('submit', onSignIn);
   $('.sign-out-button').on('click', onSignOut);
-  $('.change-password-form').on('submit', onChangePassword);
+  $('#myModal3').on('submit', onChangePassword);
 };
 
 module.exports = {

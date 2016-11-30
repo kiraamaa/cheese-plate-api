@@ -13,6 +13,7 @@ const signUp = (data) =>
 const signIn = (data) =>
   $.ajax({
     url: app.host + '/sign-in',
+    // url: 'http://localhost:4741/sign-in',
     method: 'POST',
     data,
   });
@@ -38,7 +39,7 @@ const changePassword = (data) =>
 
 module.exports = {
   signUp,
-  signUp,
+  signIn,
   signOut,
   changePassword,
 };
