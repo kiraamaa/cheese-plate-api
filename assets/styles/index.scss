@@ -68,6 +68,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 #begin-button {
   border: 2px solid #fff;
 }
+
+.add-button {
+  float: right;
+  position: relative;
+  top: 50%;
+  right: 10%;
+  vertical-align: middle;
+  text-decoration: none;
+}
 //
 // .get-stats-button {
 //   background: none;

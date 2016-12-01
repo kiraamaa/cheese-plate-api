@@ -7,13 +7,14 @@
 // require('./scripts/example.js');
 
 const authEvents = require('../auth/events.js');
-// const gameEvents = require('./game/events.js');
+const crudEvents = require('./crud/events.js');
 
 
 // On document ready
 $(() => {
   console.log('adding event handlers');
   authEvents.addHandlers();
+  crudEvents.addHandlers();
   $('.dropdown-toggle').dropdown();
   $('#begin-text').css("color", "white");
 });
