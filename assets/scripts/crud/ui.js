@@ -1,6 +1,6 @@
 'use strict';
 
-// const app = require ('../app');
+const app = require ('../../app');
 
 const getCheesesSuccess = (data) => {
   console.log(data);
@@ -8,13 +8,19 @@ const getCheesesSuccess = (data) => {
   // $('.stats-message').text("You've played " + data.games.length + " games.");
 };
 
-// const success = (data) => {
+// const getCheeseplateSuccess = (data) => {
 //   console.log(data);
-//   $('#myModal').modal('hide');
-//   $('#myModal3').modal('hide');
-//   $('body').removeClass('modal-open');
-//   $('.modal-backdrop').remove();
+//   // console.log("get game in uiakjdhkjahd");
+//   // $('.stats-message').text("You've played " + data.games.length + " games.");
 // };
+
+const success = () => {
+  // debugger;
+  console.log('create');
+  $('#myModal4').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+};
 //
 // const signInSuccess = (data) => {
 //   console.log(data);
@@ -24,14 +30,9 @@ const getCheesesSuccess = (data) => {
 //   $('.modal-backdrop').remove();
 // };
 //
-// const failure = (error) => {
-//   console.error('failing');
-//   $('#myModal').modal('hide');
-//   $('#myModal2').modal('hide');
-//   $('#myModal3').modal('hide');
-//   $('body').removeClass('modal-open');
-//   $('.modal-backdrop').remove();
-// };
+const failure = () => {
+  console.error('failing');
+};
 //
 // const changePassword = () => {
 //   console.log ('Password changed');
@@ -48,8 +49,9 @@ const getCheesesSuccess = (data) => {
 
 module.exports = {
   getCheesesSuccess,
-  // failure,
-  // success,
+  // getCheeseplateSuccess,
+  failure,
+  success,
   // signInSuccess,
   // changePassword,
   // signOutSuccess

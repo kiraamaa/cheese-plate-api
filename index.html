@@ -156,7 +156,24 @@
       <div class="col-md-6 col-md-offset-3 text-center wrap_title">
         <h2>My Cheese Plates</h2>
         <p class="lead" style="margin-top:0">View and edit your saved cheese plates here.</p>
-
+        <p class="lead" style="margin-top:0">Click <a class="create-new" role="button" data-toggle="modal" data-target="#myModal4">here</a> to create your first cheese plate.</p>
+<!-- create plate modal-->
+        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Create new plate</h4>
+              </div>
+              <div class="modal-body">
+                  <form class="create-plate-form">
+                    <input type="text" class="new-plate-input" name="cheeseplate[name]">
+                    <input type="submit">
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="row">
@@ -309,7 +326,7 @@
 
       <div class="col-md-6 col-md-offset-3 text-center wrap_title">
         <h2>Cheese Library</h2>
-        <p class="lead" style="margin-top:0">Click <button type="button" class="get-all" onclick='console.log("Hello")'>here</button> to view all available cheeses.</p>
+        <p class="lead" style="margin-top:0">Click <a href="#cheese-library" class="get-all">here</a> to view all available cheeses.</p>
        </div>
 
         <div class="col-sm-6">
@@ -363,6 +380,8 @@
       </div>
     </div>
   </div>
+
+
 
 
 

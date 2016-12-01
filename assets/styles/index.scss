@@ -77,6 +77,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   vertical-align: middle;
   text-decoration: none;
 }
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none !important;
+}
 //
 // .get-stats-button {
 //   background: none;

@@ -2,13 +2,31 @@
 
 // const getFormFields = require(`../../lib/get-form-fields.js`);
 const api = require('./api.js');
+const app = require('../../app.js');
 const ui = require('./ui.js');
 
 const onGetAllCheeses = function () {
-  debugger;
+  console.log('list of all cheeses');
   api.getAllCheeses()
     .then(ui.getCheesesSuccess)
     .catch(ui.failure);
+};
+
+// const onGetOneCheeseplate = function () {
+//   console.log('one cheeseplate');
+//   api.getOneCheeseplate()
+//     .then(ui.getCheeseplateSuccess)
+//     .catch(ui.failure);
+// };
+
+const onCreateCheeseplate = function (event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  // debugger;
+  api.createCheeseplate(data)
+    .then(ui.success)
+    .catch(ui.failure);
+  $('#myModal4').modal("hide");
 };
 
 // const onSignUp = function (event) {
@@ -49,6 +67,8 @@ const onGetAllCheeses = function () {
 
 const addHandlers = () => {
   $('.get-all').on('click', onGetAllCheeses);
+  // $('.get-one').on('click', onGetOneCheeseplate);
+  $('.create-plate-form').on('submit', onCreateCheeseplate);
   // $('#myModal2').on('submit', onSignIn);
   // $('.sign-out-button').on('click', onSignOut);
   // $('#myModal3').on('submit', onChangePassword);
