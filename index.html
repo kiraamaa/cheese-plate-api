@@ -68,7 +68,10 @@
       <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Cheese Plate Generator</h1>
       <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Discover your new favorite cheese plate</h3>
       <ul class="list-inline intro-social-buttons">
-        <li id="signup"><a href="#createplate" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Begin</span></a>
+        <li id="signup">
+          <div id="begin-button">
+            <a href="#createplate" id="begin-text" class="btn btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Begin</span></a>
+          </div>
         </li>
       </ul>
     </div>
@@ -190,7 +193,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center wrap_title">
         <h2>Create a new cheese plate</h2>
-        <p class="makebutton"><a class="btn btn-primary view" role="button" data-toggle="modal" data-target="#cheeseModal">Make my cheese plate</a></p>
+        <p><a class="btn btn-primary view" id="make-plate-button" role="button" data-toggle="modal" data-target="#cheeseModal">Make my cheese plate</a></p>
         <div id="cheeseModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">

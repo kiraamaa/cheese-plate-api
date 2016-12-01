@@ -15,4 +15,5 @@ $(() => {
   console.log('adding event handlers');
   authEvents.addHandlers();
   $('.dropdown-toggle').dropdown();
+  $('#begin-text').css("color", "white");
 });

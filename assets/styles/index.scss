@@ -60,17 +60,14 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   padding: 0;
 }
 
-#img-circular {
- width: 200px;
- height: 200px;
- background-image: url('http://www.stuckeys.com/wp-content/uploads/2014/07/specialty-nuts.jpeg');
- background-size: cover;
- display: block;
- border-radius: 100px;
- -webkit-border-radius: 100px;
- -moz-border-radius: 100px;
+#make-plate-button {
+  background-color: #767575;
+  border: none;
 }
 
+#begin-button {
+  border: 2px solid #fff;
+}
 //
 // .get-stats-button {
 //   background: none;
