@@ -2,25 +2,20 @@
 
 // const app = require ('../../app');
 
+const getCheeses = require('../handlebars-templates/show-all-cheeses.handlebars');
+
 const getCheesesSuccess = (data) => {
   console.log(data);
+  $('.poop').html(getCheeses(data));
 };
 
-const updateCheeseplateSuccess = (data) => {
+const updateCheeseSuccess = (data) => {
   console.log(data);
 };
 
-const deleteCheeseplateSuccess = (data) => {
-  console.log(data);
-  // let i = cheeseplates.length,
-  //   cheeseplateData;
-  //
-  // while(i--) {
-  //     if(selectedGroup.owner == users[i].id) {
-  //         ownerData = users[i];
-  //         break;
-  //     }
-  // }
+const deleteCheeseSuccess = () => {
+  console.log('poop');
+  // $('.poop').html(deleteCheese(data));
 };
 
 // const getCheeseplateSuccess = (data) => {
@@ -48,10 +43,10 @@ const failure = () => {
 module.exports = {
   getCheesesSuccess,
   // getCheeseplateSuccess,
-  updateCheeseplateSuccess,
+  updateCheeseSuccess,
   failure,
   createCheeseplateSuccess,
-  deleteCheeseplateSuccess,
+  deleteCheeseSuccess,
   // signInSuccess,
   // changePassword,
   // signOutSuccess

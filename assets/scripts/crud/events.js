@@ -30,24 +30,20 @@ const onCreateCheeseplate = function (event) {
   $('#myModal4').modal("hide");
 };
 
-const onUpdateCheeseplate = function () {
-let data = {
-  "cheeseplate": {
-    "cheese": {
-        "name": glob.vars.name,
-        "description": glob.vars.description,
-      },
-  },
-};
-api.updateCheeseplate(data)
-  .then(ui.updateCheeseplateSuccess)
-  .catch(ui.failure);
+const onUpdateCheese = function (event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  api.updateCheese(data)
+    .then(ui.updateCheeseSuccess)
+    .catch(ui.failure);
 };
 
-const onDeleteCheeseplate = function (event) {
+const onDeleteCheese = function (event) {
   event.preventDefault();
-  api.deleteCheeseplate()
-    .then(ui.deleteCheeseplateSuccess)
+  let id = $(this).data().cheeseId;
+  console.log(id);
+  api.deleteCheese(id)
+    .then(ui.deleteCheeseSuccess)
     .catch(ui.failure);
 };
 
@@ -56,8 +52,9 @@ const addHandlers = () => {
   $('.get-all').on('click', onGetAllCheeses);
   // $('.get-one').on('click', onGetOneCheeseplate);
   $('.create-plate-form').on('submit', onCreateCheeseplate);
-  $('.add-button').on('click', onUpdateCheeseplate);
-  $('.delete-button').on('click', onDeleteCheeseplate);
+  $('.update-cheese-form').on('submit', onUpdateCheese);
+  // $('.delete-button').on('click', onDeleteCheese);
+  $('.poop').on('click', '.delete-button', onDeleteCheese);
   // $('#myModal2').on('submit', onSignIn);
   // $('.sign-out-button').on('click', onSignOut);
   // $('#myModal3').on('submit', onChangePassword);

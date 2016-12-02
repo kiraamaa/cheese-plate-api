@@ -35,10 +35,10 @@ $.ajax({
   data,
 });
 
-const updateCheeseplate = (data) =>
+const updateCheese = (data) =>
 $.ajax({
-  url: 'http://localhost:4741/cheeseplates/10',
-  // url: app.host + '/cheeseplates/' + app.cheeseplates.id,
+  url: 'http://localhost:4741/cheeses/4',
+  // url: app.host + '/cheeses/' + data.cheeses.cheese_id,
   method: 'PATCH',
   // headers: {
   //   Authorization: 'Token token=' + app.user.token,
@@ -46,14 +46,14 @@ $.ajax({
   data,
 });
 
-const deleteCheeseplate = () =>
+const deleteCheese = (id) =>
   $.ajax({
-    // url: app.host + '/cheeseplates/' + app.cheeseplate.id,
-    url: 'http://localhost:4741/cheeseplates/14',
+    url: app.host + '/cheeses/' + id,
+    // url: 'http://localhost:4741/cheeses/4',
     method: 'DELETE',
-    headers: {
-      Authorization: "Token token=" + app.user.token,
-    },
+    // headers: {
+    //   Authorization: "Token token=" + app.user.token,
+    // },
   });
 
 
@@ -62,6 +62,6 @@ module.exports = {
   getAllCheeses,
   // getOneCheeseplate,
   createCheeseplate,
-  updateCheeseplate,
-  deleteCheeseplate,
+  updateCheese,
+  deleteCheese,
 };

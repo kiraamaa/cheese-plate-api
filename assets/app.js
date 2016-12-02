@@ -7,5 +7,5 @@ const app = {
 
 module.exports = {
   app,
-  host: 'https://localhost:4741',
+  host: 'http://localhost:4741',
 };
