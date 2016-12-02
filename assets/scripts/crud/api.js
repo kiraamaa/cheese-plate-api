@@ -53,7 +53,7 @@ const deleteCheeseplate = () =>
     method: 'DELETE',
     headers: {
       Authorization: "Token token=" + app.user.token,
-    }
+    },
   });
 
 
