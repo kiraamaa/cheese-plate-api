@@ -29,9 +29,9 @@ const getAllCheeses = (data) =>
     // url: app.host + '/cheeseplates',
     url: 'http://localhost:4741/cheeseplates',
     method: 'POST',
-    // headers: {
-    //   Authorization: 'Token token=' + app.user.token,
-    // },
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
     data,
   });
 
