@@ -20,16 +20,6 @@ const onGetAllCheeses = function () {
 //     .catch(ui.failure);
 // };
 
-const onCreateCheeseplate = function (event) {
-  event.preventDefault();
-  let data = getFormFields(event.target);
-  // debugger;
-  api.createCheeseplate(data)
-    .then(ui.createCheeseplateSuccess)
-    .catch(ui.failure);
-  $('#myModal4').modal("hide");
-};
-
 const onUpdateCheese = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -47,6 +37,48 @@ const onDeleteCheese = function (event) {
     .catch(ui.failure);
 };
 
+const onGetAllCheeseplates = function () {
+  console.log('list of all cheeseplates');
+  api.getAllCheeseplates()
+    .then(ui.getCheeseplatesSuccess)
+    .catch(ui.failure);
+};
+
+// const onGetOneCheeseplate = function () {
+//   console.log('one cheeseplate');
+//   api.getOneCheeseplate()
+//     .then(ui.getCheeseplateSuccess)
+//     .catch(ui.failure);
+// };
+
+const onCreateCheeseplate = function (event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  // debugger;
+  api.createCheeseplate(data)
+    .then(ui.createCheeseplateSuccess)
+    .catch(ui.failure);
+  $('#myModal4').modal("hide");
+};
+
+const onUpdateCheeseplate = function (event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  api.updateCheeseplate(data)
+    .then(ui.updateCheeseplateSuccess)
+    .catch(ui.failure);
+};
+
+const onDeleteCheeseplate = function (event) {
+  event.preventDefault();
+  let id = $(this).data().cheeseplateId;
+  console.log(id);
+  api.deleteCheeseplate(id)
+    .then(ui.deleteCheeseplateSuccess)
+    .catch(ui.failure);
+};
+
+
 
 const addHandlers = () => {
   $('.get-all').on('click', onGetAllCheeses);
@@ -55,9 +87,7 @@ const addHandlers = () => {
   $('.update-cheese-form').on('submit', onUpdateCheese);
   // $('.delete-button').on('click', onDeleteCheese);
   $('.poop').on('click', '.delete-button', onDeleteCheese);
-  // $('#myModal2').on('submit', onSignIn);
-  // $('.sign-out-button').on('click', onSignOut);
-  // $('#myModal3').on('submit', onChangePassword);
+  $('.get-plates').on('click', onGetAllCheeseplates);
 };
 
 module.exports = {
