@@ -82,7 +82,11 @@ a,
 a:hover,
 a:active,
 a:visited {
-    text-decoration: none !important;
+  text-decoration: none !important;
+}
+
+.newest-plate {
+  margin: 10px;
 }
 //
 // .get-stats-button {
