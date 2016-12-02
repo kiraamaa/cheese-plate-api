@@ -1,8 +1,14 @@
 'use strict';
 
-const app = require ('../../app');
+// const app = require ('../../app');
 
 const getCheesesSuccess = (data) => {
+  console.log(data);
+  // console.log("get game in uiakjdhkjahd");
+  // $('.stats-message').text("You've played " + data.games.length + " games.");
+};
+
+const updateCheeseplateSuccess = (data) => {
   console.log(data);
   // console.log("get game in uiakjdhkjahd");
   // $('.stats-message').text("You've played " + data.games.length + " games.");
@@ -21,26 +27,11 @@ const success = () => {
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
 };
-//
-// const signInSuccess = (data) => {
-//   console.log(data);
-//   app.user = data.user;
-//   $('#myModal2').modal('hide');
-//   $('body').removeClass('modal-open');
-//   $('.modal-backdrop').remove();
-// };
-//
+
 const failure = () => {
   console.error('failing');
 };
-//
-// const changePassword = () => {
-//   console.log ('Password changed');
-//   $('#myModal3').modal('hide');
-//   $('body').removeClass('modal-open');
-//   $('.modal-backdrop').remove();
-// };
-//
+
 // const signOutSuccess = () => {
 //   app.user = null;
 //   // console.log ('Signed out');
@@ -50,6 +41,7 @@ const failure = () => {
 module.exports = {
   getCheesesSuccess,
   // getCheeseplateSuccess,
+  updateCheeseplateSuccess,
   failure,
   success,
   // signInSuccess,

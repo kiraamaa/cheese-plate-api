@@ -2,7 +2,8 @@
 
 const getFormFields = require(`../../../lib/get-form-fields.js`);
 const api = require('./api.js');
-const app = require('../../app.js');
+// const app = require('../../app.js');
+const glob = require('./global.js');
 const ui = require('./ui.js');
 
 const onGetAllCheeses = function () {
@@ -29,46 +30,34 @@ const onCreateCheeseplate = function (event) {
   $('#myModal4').modal("hide");
 };
 
-// const onSignUp = function (event) {
-//   let data = getFormFields(event.target);
-//   event.preventDefault();
-//   api.signUp(data)
-//     .then(ui.success)
-//     .catch(ui.failure);
-//   $('#myModal').modal("hide");
-// };
-//
-// const onSignIn = function (event) {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   console.log(data);
-//   api.signIn(data)
-//     .then(ui.signInSuccess)
-//     .catch(ui.failure);
-//   console.log('click');
-//   $('#myModal2').modal("hide");
-// };
-//
-// const onSignOut = function (event) {
-//   event.preventDefault();
-//   api.signOut()
-//     .then(ui.success)
-//     .catch(ui.failure);
-// };
-//
-// const onChangePassword = function (event) {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   api.changePassword(data)
-//     .then(ui.success)
-//     .catch(ui.failure);
-//   $('#myModal3').modal("hide");
-// };
+const onUpdateCheeseplate = function () {
+let data = {
+  "cheeseplate": {
+    "cheese": {
+        "name": glob.vars.name,
+        "description": glob.vars.description,
+      },
+  },
+};
+api.updateCheeseplate(data)
+  .then(ui.updateCheeseplateSuccess)
+  .catch(ui.failure);
+};
+
+const onDeleteCheeseplate = function (event) {
+  event.preventDefault();
+  api.deleteCheeseplate()
+    .then(ui.success)
+    .catch(ui.failure);
+};
+
 
 const addHandlers = () => {
   $('.get-all').on('click', onGetAllCheeses);
   // $('.get-one').on('click', onGetOneCheeseplate);
   $('.create-plate-form').on('submit', onCreateCheeseplate);
+  $('.add-button').on('click', onUpdateCheeseplate);
+  $('.delete-button').on('click', onDeleteCheeseplate);
   // $('#myModal2').on('submit', onSignIn);
   // $('.sign-out-button').on('click', onSignOut);
   // $('#myModal3').on('submit', onChangePassword);

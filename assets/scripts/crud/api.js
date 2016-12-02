@@ -24,46 +24,44 @@ const getAllCheeses = (data) =>
 //     data,
 //   });
 
-  const createCheeseplate = (data) =>
+const createCheeseplate = (data) =>
+$.ajax({
+  url: app.host + '/cheeseplates',
+  // url: 'http://localhost:4741/cheeseplates',
+  method: 'POST',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+  },
+  data,
+});
+
+const updateCheeseplate = (data) =>
+$.ajax({
+  url: 'http://localhost:4741/cheeseplates/3',
+  // url: app.host + '/cheeseplates/' + app.cheeseplates.id,
+  method: 'PATCH',
+  // headers: {
+  //   Authorization: 'Token token=' + app.user.token,
+  // },
+  data,
+});
+
+const deleteCheeseplate = () =>
   $.ajax({
-    // url: app.host + '/cheeseplates',
-    url: 'http://localhost:4741/cheeseplates',
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-    },
-    data,
+    // url: app.host + '/sign-out/' + app.user.id,
+    url: 'http://localhost:4741/cheeseplates/11',
+    method: 'DELETE',
+    // headers: {
+    //   Authorization: "Token token=" + app.user.token,
+    // }
   });
 
-// const signIn = (data) =>
-//   $.ajax({
-//     url: app.host + '/sign-in',
-//     // url: 'http://localhost:4741/sign-in',
-//     method: 'POST',
-//     data,
-//   });
-//
-// const signOut = () =>
-//   $.ajax({
-//     url: app.host + '/sign-out/' + app.user.id,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: "Token token=" + app.user.token,
-//     }
-//   });
-//
-// const changePassword = (data) =>
-//   $.ajax({
-//     url: app.host + '/change-password/' + app.user.id,
-//     method: 'PATCH',
-//     data,
-//     headers: {
-//       Authorization: "Token token=" + app.user.token,
-//     }
-//   });
+
 
 module.exports = {
   getAllCheeses,
   // getOneCheeseplate,
   createCheeseplate,
+  updateCheeseplate,
+  deleteCheeseplate,
 };
