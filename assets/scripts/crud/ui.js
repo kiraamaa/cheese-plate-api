@@ -4,23 +4,30 @@
 
 const getCheesesSuccess = (data) => {
   console.log(data);
-  // console.log("get game in uiakjdhkjahd");
-  // $('.stats-message').text("You've played " + data.games.length + " games.");
 };
 
 const updateCheeseplateSuccess = (data) => {
   console.log(data);
-  // console.log("get game in uiakjdhkjahd");
-  // $('.stats-message').text("You've played " + data.games.length + " games.");
+};
+
+const deleteCheeseplateSuccess = (data) => {
+  console.log(data);
+  // let i = cheeseplates.length,
+  //   cheeseplateData;
+  //
+  // while(i--) {
+  //     if(selectedGroup.owner == users[i].id) {
+  //         ownerData = users[i];
+  //         break;
+  //     }
+  // }
 };
 
 // const getCheeseplateSuccess = (data) => {
 //   console.log(data);
-//   // console.log("get game in uiakjdhkjahd");
-//   // $('.stats-message').text("You've played " + data.games.length + " games.");
 // };
 
-const success = () => {
+const createCheeseplateSuccess = () => {
   // debugger;
   console.log('create');
   $('#myModal4').modal('hide');
@@ -43,7 +50,8 @@ module.exports = {
   // getCheeseplateSuccess,
   updateCheeseplateSuccess,
   failure,
-  success,
+  createCheeseplateSuccess,
+  deleteCheeseplateSuccess,
   // signInSuccess,
   // changePassword,
   // signOutSuccess

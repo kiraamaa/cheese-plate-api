@@ -48,8 +48,8 @@ $.ajax({
 
 const deleteCheeseplate = () =>
   $.ajax({
-    // url: app.host + '/sign-out/' + app.user.id,
-    url: 'http://localhost:4741/cheeseplates/11',
+    // url: app.host + '/cheeseplates/' + app.cheeseplate.id,
+    url: 'http://localhost:4741/cheeseplates/12',
     method: 'DELETE',
     // headers: {
     //   Authorization: "Token token=" + app.user.token,

@@ -25,7 +25,7 @@ const onCreateCheeseplate = function (event) {
   let data = getFormFields(event.target);
   // debugger;
   api.createCheeseplate(data)
-    .then(ui.success)
+    .then(ui.createCheeseplateSuccess)
     .catch(ui.failure);
   $('#myModal4').modal("hide");
 };
@@ -47,7 +47,7 @@ api.updateCheeseplate(data)
 const onDeleteCheeseplate = function (event) {
   event.preventDefault();
   api.deleteCheeseplate()
-    .then(ui.success)
+    .then(ui.deleteCheeseplateSuccess)
     .catch(ui.failure);
 };
 
