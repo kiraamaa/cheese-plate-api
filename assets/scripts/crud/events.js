@@ -38,6 +38,7 @@ const onDeleteCheese = function (event) {
 };
 
 const onGetAllCheeseplates = function () {
+  event.preventDefault();
   console.log('list of all cheeseplates');
   api.getAllCheeseplates()
     .then(ui.getCheeseplatesSuccess)

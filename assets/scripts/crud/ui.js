@@ -37,12 +37,13 @@ const deleteCheeseplateSuccess = () => {
   // $('.poop').html(deleteCheese(data));
 };
 
-const createCheeseplateSuccess = () => {
+const createCheeseplateSuccess = (data) => {
   // debugger;
   console.log('create cheeseplate');
-  // $('#myModal4').modal('hide');
-  // $('body').removeClass('modal-open');
-  // $('.modal-backdrop').remove();
+  $('#myModal4').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+  $('.newest-plates').html(getCheeseplates(data));
 };
 
 const failure = () => {
