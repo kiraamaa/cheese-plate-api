@@ -37,7 +37,7 @@ $.ajax({
 
 const updateCheeseplate = (data) =>
 $.ajax({
-  url: 'http://localhost:4741/cheeseplates/3',
+  url: 'http://localhost:4741/cheeseplates/10',
   // url: app.host + '/cheeseplates/' + app.cheeseplates.id,
   method: 'PATCH',
   // headers: {
@@ -49,11 +49,11 @@ $.ajax({
 const deleteCheeseplate = () =>
   $.ajax({
     // url: app.host + '/cheeseplates/' + app.cheeseplate.id,
-    url: 'http://localhost:4741/cheeseplates/12',
+    url: 'http://localhost:4741/cheeseplates/14',
     method: 'DELETE',
-    // headers: {
-    //   Authorization: "Token token=" + app.user.token,
-    // }
+    headers: {
+      Authorization: "Token token=" + app.user.token,
+    }
   });
 
 
