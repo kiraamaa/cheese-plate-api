@@ -1,8 +1,10 @@
 {{#each cheeses as |cheese|}}
-<div class="cheese-library-section">
-  {{cheese.name}}
-  {{cheese.id}}
-  <!--<button type="button" class="update-button" data-cheese-id="{{cheese.id}}">Update Cheese</button>-->
-  <input type="text" class="new-cheese-name" data-cheese-name="{{cheese.name}}" placeholder="New cheese name">
-</div>
+<ul class="list-group">
+  <li class="list-group-item">
+    {{cheese.name}}<br>
+    {{cheese.description}}
+  </li>
+</ul>
+  <!--<button type="button" class="update-button" data-cheese-id="{{cheese.id}}">Update Cheese</button>
+  <input type="text" class="new-cheese-name" data-cheese-name="{{cheese.name}}" placeholder="New cheese name">-->
 {{/each}}

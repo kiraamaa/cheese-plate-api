@@ -8,7 +8,7 @@ const getCheeseplates = require('../handlebars-templates/show-all-cheeseplates.h
 
 const getCheesesSuccess = (data) => {
   console.log(data);
-  $('.poop').html(getCheeses(data));
+  $('.cheeses-content').html(getCheeses(data));
 };
 
 const updateCheeseSuccess = (data) => {
