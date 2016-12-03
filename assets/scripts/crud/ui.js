@@ -4,6 +4,7 @@
 
 const getCheeses = require('../handlebars-templates/show-all-cheeses.handlebars');
 const getCheeseplates = require('../handlebars-templates/show-all-cheeseplates.handlebars');
+// const updateCheese = require('../handlebars-templates/update-cheese.handlebars');
 
 const getCheesesSuccess = (data) => {
   console.log(data);
@@ -12,12 +13,13 @@ const getCheesesSuccess = (data) => {
 
 const updateCheeseSuccess = (data) => {
   console.log(data);
+  $('.poop').html(getCheeses(data));
 };
 
-const deleteCheeseSuccess = () => {
-  console.log('poop');
-  $('.poop').html(deleteCheese(data));
-};
+// const deleteCheeseSuccess = () => {
+//   console.log('poop');
+//   $('.poop').html(deleteCheese(data));
+// };
 
 // const getCheeseplateSuccess = (data) => {
 //   console.log(data);
@@ -28,13 +30,14 @@ const getCheeseplatesSuccess = (data) => {
   $('.newest-plates').html(getCheeseplates(data));
 };
 
-const updateCheeseplateSuccess = (data) => {
-  console.log(data);
-};
+// const updateCheeseplateSuccess = (data) => {
+//   console.log(data);
+//   $('.newest-plates').html(getCheeseplates(data));
+// };
 
 const deleteCheeseplateSuccess = () => {
-  // console.log('poop');
-  // $('.poop').html(deleteCheese(data));
+  console.log('poop');
+  $('.cheeseplate').html(getCheeseplates());
 };
 
 const createCheeseplateSuccess = (data) => {
@@ -60,10 +63,10 @@ module.exports = {
   getCheesesSuccess,
   // getCheeseplateSuccess,
   updateCheeseSuccess,
-  deleteCheeseSuccess,
+  // deleteCheeseSuccess,
   failure,
   createCheeseplateSuccess,
   getCheeseplatesSuccess,
-  updateCheeseplateSuccess,
+  // updateCheeseplateSuccess,
   deleteCheeseplateSuccess,
 };

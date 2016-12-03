@@ -20,22 +20,33 @@ const onGetAllCheeses = function () {
 //     .catch(ui.failure);
 // };
 
+// const onUpdateCheese = function (event) {
+//   event.preventDefault();
+//   let data = getFormFields(event.target);
+//
+//   api.updateCheese(data)
+//     .then(ui.updateCheeseSuccess)
+//     .catch(ui.failure);
+// };
+
 const onUpdateCheese = function (event) {
   event.preventDefault();
+  // let id = $(this).data().cheeseId;
+  // console.log(id);
   let data = getFormFields(event.target);
   api.updateCheese(data)
     .then(ui.updateCheeseSuccess)
     .catch(ui.failure);
 };
 
-const onDeleteCheese = function (event) {
-  event.preventDefault();
-  let id = $(this).data().cheeseId;
-  console.log(id);
-  api.deleteCheese(id)
-    .then(ui.deleteCheeseSuccess)
-    .catch(ui.failure);
-};
+// const onDeleteCheese = function (event) {
+//   event.preventDefault();
+//   let id = $(this).data().cheeseId;
+//   console.log(id);
+//   api.deleteCheese(id)
+//     .then(ui.deleteCheeseSuccess)
+//     .catch(ui.failure);
+// };
 
 const onGetAllCheeseplates = function () {
   event.preventDefault();
@@ -62,13 +73,14 @@ const onCreateCheeseplate = function (event) {
   $('#myModal4').modal("hide");
 };
 
-const onUpdateCheeseplate = function (event) {
-  event.preventDefault();
-  let data = getFormFields(event.target);
-  api.updateCheeseplate(data)
-    .then(ui.updateCheeseplateSuccess)
-    .catch(ui.failure);
-};
+// const onUpdateCheeseplate = function (event) {
+//   event.preventDefault();
+//   let data = getFormFields(event.target);
+//   console.log('clicked');
+//     api.updateCheeseplate(data)
+//     .then(ui.updateCheeseplateSuccess)
+//     .catch(ui.failure);
+// };
 
 const onDeleteCheeseplate = function (event) {
   event.preventDefault();
@@ -86,10 +98,13 @@ const addHandlers = () => {
   // $('.get-one').on('click', onGetOneCheeseplate);
   $('.create-plate-form').on('submit', onCreateCheeseplate);
   $('.update-cheese-form').on('submit', onUpdateCheese);
-  // $('.delete-button').on('click', onDeleteCheese);
-  $('.poop').on('click', '.delete-button', onDeleteCheese);
+  // $('.change-cheeseplate-form').on('submit', onUpdateCheeseplate);
+  // $('.poop').on('click', '.delete-button', onDeleteCheese);
+  $('.newest-plates').on('click', '.delete-cheeseplate-button', onDeleteCheeseplate);
   $('.get-plates').on('click', onGetAllCheeseplates);
-};
+  // $('.cheeseplate-name-div').on('click', '.update-cheeseplate-form', onUpdateCheeseplate);
+// $('.list-group-item').on('click', '.delete-cheeseplate-button', onDeleteCheeseplate);
+ };
 
 module.exports = {
   addHandlers,

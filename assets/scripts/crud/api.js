@@ -28,8 +28,8 @@ const getAllCheeses = (data) =>
 
 const updateCheese = (data) =>
 $.ajax({
-  url: 'http://localhost:4741/cheeses/4',
-  // url: app.host + '/cheeses/' + data.cheeses.cheese_id,
+  url: 'http://localhost:4741/cheeses/2',
+  // url: app.host + '/cheeses/' + id,
   method: 'PATCH',
   // headers: {
   //   Authorization: 'Token token=' + app.user.token,
@@ -37,15 +37,15 @@ $.ajax({
   data,
 });
 
-const deleteCheese = (id) =>
-  $.ajax({
-    url: app.host + '/cheeses/' + id,
-    // url: 'http://localhost:4741/cheeses/4',
-    method: 'DELETE',
-    // headers: {
-    //   Authorization: "Token token=" + app.user.token,
-    // },
-  });
+// const deleteCheese = (id) =>
+//   $.ajax({
+//     url: app.host + '/cheeses/' + id,
+//     // url: 'http://localhost:4741/cheeses/4',
+//     method: 'DELETE',
+//     // headers: {
+//     //   Authorization: "Token token=" + app.user.token,
+//     // },
+//   });
 
 
 
@@ -66,31 +66,31 @@ const deleteCheese = (id) =>
     url: app.host + '/cheeseplates',
     // url: 'http://localhost:4741/cheeseplates',
     method: 'POST',
-    // headers: {
-    //   Authorization: 'Token token=' + app.user.token,
-    // },
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
     data,
   });
 
-  const updateCheeseplate = (data) =>
-  $.ajax({
-    url: 'http://localhost:4741/cheeseplates/14',
-    // url: app.host + '/cheeses/' + data.cheeses.cheese_id,
-    method: 'PATCH',
-    // headers: {
-    //   Authorization: 'Token token=' + app.user.token,
-    // },
-    data,
-  });
+  // const updateCheeseplate = (data) =>
+  // $.ajax({
+  //   url: 'http://localhost:4741/cheeseplates/1',
+  //   // url: app.host + '/cheeseplates/' + id,
+  //   method: 'PATCH',
+  //   // headers: {
+  //   //   Authorization: 'Token token=' + app.user.token,
+  //   // },
+  //   data,
+  // });
 
   const deleteCheeseplate = (id) =>
     $.ajax({
       url: app.host + '/cheeseplates/' + id,
       // url: 'http://localhost:4741/cheeses/4',
       method: 'DELETE',
-      // headers: {
-      //   Authorization: "Token token=" + app.user.token,
-      // },
+      headers: {
+        Authorization: "Token token=" + app.user.token,
+      },
     });
 
 
@@ -100,9 +100,9 @@ module.exports = {
   getAllCheeses,
   // getOneCheeseplate,
   updateCheese,
-  deleteCheese,
+  // deleteCheese,
   getAllCheeseplates,
   createCheeseplate,
-  updateCheeseplate,
+  // updateCheeseplate,
   deleteCheeseplate,
 };

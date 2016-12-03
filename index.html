@@ -70,7 +70,7 @@
       <ul class="list-inline intro-social-buttons">
         <li id="signup">
           <div id="begin-button">
-            <a href="#createplate" id="begin-text" class="btn btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Begin</span></a>
+            <a data-toggle="modal" data-target="#myModal" class="btn btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Sign Up</span></a>
           </div>
         </li>
       </ul>
@@ -102,7 +102,7 @@
           <li class="menuItem"><a href="#cheeseplate">My Cheese Plates</a></li>
           <!--<li class="menuItem"><a href="#useit">Cheese Library</a></li>-->
           <li class="menuItem"><a href="#createplate">Create A Cheese Plate</a></li>
-          <!--<li class="menuItem"><a href="#credits">Credits</a></li>-->
+          <li class="menuItem"><a href="#cheese-library">Cheese Library</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up/In<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -156,35 +156,17 @@
       <div class="col-md-6 col-md-offset-3 text-center wrap_title">
         <h2>My Cheese Plates</h2>
         <p class="lead" style="margin-top:0">View and edit your saved cheese plates <a href="#cheeseplate" class="get-plates">here.</a></p>
-        <p class="lead" style="margin-top:0">Click <!--<a class="create-new" role="button" data-toggle="modal" data-target="#myModal4">-->here</a> to create your first cheese plate.</p>
-<!-- create plate modal-->
-        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Create new plate</h4>
-              </div>
-              <div class="modal-body">
-                  <form class="create-plate-form">
-                    <input type="text" class="new-plate-input form-control" name="cheeseplate[name]" placeholder="New cheese plate name">
-                    <!--<input type="submit">-->
-                    <button type="submit" class="newest-plate btn btn-default">Submit</button>
-                  </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <!--<p class="lead" style="margin-top:0">Click <a class="create-new" role="button" data-toggle="modal" data-target="#myModal4">here</a> to create your first cheese plate.</p>-->
 
       <div class="cheeseplate-row">
-        <div class="col-md-4 col-md-offset-4 newest-plates">
+        <div class="col-md-6 col-md-offset-3 newest-plates">
         </div>
 
 
       </div><!-- /.row -->
     </div>
   </div>
+</div>
 
   <!-- Cheese Plate Maker -->
   <div id="createplate" class="banner">
@@ -195,7 +177,26 @@
           <div class="new-cheeseplate-div">
             <a class="create-new" role="button" data-toggle="modal" data-target="#myModal4">Craft my cheese plate</a>
           </div>
-        <div id="cheeseModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <!-- create plate modal-->
+          <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title title-new-plate">Create a new plate</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="create-plate-form">
+                      <input type="text" class="new-plate-input form-control" name="cheeseplate[name]" placeholder="Cheese plate name">
+                      <!--<input type="submit">-->
+                      <button type="submit" class="newest-plate btn btn-default">Submit</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div id="cheeseModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -203,11 +204,10 @@
                 </div>
             </div>
           </div>
-        </div>
+        </div>-->
        </div>
       </div>
     </div>
-  </div>
 
   <!-- Sign up modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -228,7 +228,7 @@
             <div class="form-group">
               <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword1" placeholder="Confirm password">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="sign-up-submit btn btn-default">Submit</button>
           </form>
         </div>
       </div>
@@ -313,7 +313,7 @@
         <p class="lead" style="margin-top:0">Click <a href="#cheese-library" class="get-all">here</a> to view all available cheeses.</p>
        </div>
 
-        <div class="col-sm-6">
+        <!--<div class="col-sm-6">
           <div class="row">
             <div class="col-md-4">
               <i class="fa fa-desktop fa-4x "> </i>
@@ -359,7 +359,8 @@
             <p> P good. </p>
             </div>
           </div>
-        </div>
+        </div>-->
+
       </div>
     </div>
   </div>
@@ -372,6 +373,21 @@
     <button type="submit" class="change-cheese-button btn btn-default">Submit</button>
   </form>
 </div>
+
+<!--<div class="poop">
+  <form class="update-cheeseplate-form">
+    <input type="text" class="cheeseplate-id" name="cheeseplate[cheeseplate_id]" placeholder="Cheeseplate id">
+    <input type="text" class="cheeseplate-name" name="cheeseplate[name]" placeholder="New name">
+    <button type="submit" class="change-cheeseplate-button btn btn-default">Submit</button>
+  </form>
+</div>-->
+
+<!--<div class="cheeseplate-name-div">
+  <form class="update-cheeseplate-form">
+    <input type="text" class="cheeseplate-name" name="cheeseplate[name]" placeholder="New name">
+    <button type="submit" class="change-cheese-button btn btn-default">Submit</button>
+  </form>
+</div>-->
 
 
 
