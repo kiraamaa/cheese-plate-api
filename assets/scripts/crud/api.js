@@ -28,7 +28,7 @@ const getAllCheeses = (data) =>
 
 const updateCheese = (data) =>
 $.ajax({
-  url: 'https://hidden-lowlands-96809.herokuapp.com/1',
+  url: 'https://hidden-lowlands-96809.herokuapp.com/cheeses/1',
   // url: app.host + '/cheeses/' + id,
   method: 'PATCH',
   // headers: {
