@@ -425,7 +425,7 @@ webpackJsonp([0],[
 
 	var updateCheese = function updateCheese(data) {
 	  return $.ajax({
-	    url: 'http://localhost:4741/cheeses/11',
+	    url: 'https://hidden-lowlands-96809.herokuapp.com/1',
 	    // url: app.host + '/cheeses/' + id,
 	    method: 'PATCH',
 	    // headers: {
