@@ -99,7 +99,7 @@ const addHandlers = () => {
   $('.create-plate-form').on('submit', onCreateCheeseplate);
   $('.update-cheese-form').on('submit', onUpdateCheese);
   // $('.change-cheeseplate-form').on('submit', onUpdateCheeseplate);
-  // $('.poop').on('click', '.delete-button', onDeleteCheese);
+  // $('.change-name-of-last-cheese').on('click', '.delete-button', onDeleteCheese);
   $('.newest-plates').on('click', '.delete-cheeseplate-button', onDeleteCheeseplate);
   $('.get-plates').on('click', onGetAllCheeseplates);
   // $('.cheeseplate-name-div').on('click', '.update-cheeseplate-form', onUpdateCheeseplate);

@@ -28,7 +28,7 @@ const getAllCheeses = (data) =>
 
 const updateCheese = (data) =>
 $.ajax({
-  url: 'http://localhost:4741/cheeses/2',
+  url: 'http://localhost:4741/cheeses/11',
   // url: app.host + '/cheeses/' + id,
   method: 'PATCH',
   // headers: {

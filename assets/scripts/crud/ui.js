@@ -13,12 +13,12 @@ const getCheesesSuccess = (data) => {
 
 const updateCheeseSuccess = (data) => {
   console.log(data);
-  $('.poop').html(getCheeses(data));
+  $('.cheeses-content').html(getCheeses(data));
 };
 
 // const deleteCheeseSuccess = () => {
-//   console.log('poop');
-//   $('.poop').html(deleteCheese(data));
+//   console.log('change-name-of-last-cheese');
+//   $('.change-name-of-last-cheese').html(deleteCheese(data));
 // };
 
 // const getCheeseplateSuccess = (data) => {
@@ -36,7 +36,7 @@ const getCheeseplatesSuccess = (data) => {
 // };
 
 const deleteCheeseplateSuccess = () => {
-  console.log('poop');
+  console.log('change-name-of-last-cheese');
   $('.cheeseplate').html(getCheeseplates());
 };
 

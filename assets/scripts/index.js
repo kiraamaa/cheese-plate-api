@@ -17,4 +17,5 @@ $(() => {
   crudEvents.addHandlers();
   $('.dropdown-toggle').dropdown();
   $('#begin-text').css("color", "white");
+  $('.update-cheese-form').show();
 });
