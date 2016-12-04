@@ -26,14 +26,14 @@ const getAllCheeses = (data) =>
 //     data,
 //   });
 
-const updateCheese = (data) =>
+const updateCheeseplate = (data) =>
 $.ajax({
-  url: 'https://hidden-lowlands-96809.herokuapp.com/cheeses/1',
-  // url: app.host + '/cheeses/' + id,
+  // url: 'https://hidden-lowlands-96809.herokuapp.com/cheeses/1',
+  url: app.host + '/cheeseplates/' + data.cheeseplate.id,
   method: 'PATCH',
-  // headers: {
-  //   Authorization: 'Token token=' + app.user.token,
-  // },
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+  },
   data,
 });
 
@@ -86,7 +86,6 @@ $.ajax({
   const deleteCheeseplate = (id) =>
     $.ajax({
       url: app.host + '/cheeseplates/' + id,
-      // url: 'http://localhost:4741/cheeses/4',
       method: 'DELETE',
       headers: {
         Authorization: "Token token=" + app.user.token,
@@ -99,7 +98,7 @@ $.ajax({
 module.exports = {
   getAllCheeses,
   // getOneCheeseplate,
-  updateCheese,
+  updateCheeseplate,
   // deleteCheese,
   getAllCheeseplates,
   createCheeseplate,

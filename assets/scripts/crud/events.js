@@ -29,13 +29,14 @@ const onGetAllCheeses = function () {
 //     .catch(ui.failure);
 // };
 
-const onUpdateCheese = function (event) {
+const onUpdateCheeseplate = function (event) {
   event.preventDefault();
   // let id = $(this).data().cheeseId;
-  // console.log(id);
+  // let id = event.target.form.getAttribute("data-cheeseplate-id");
+  console.log(event.target);
   let data = getFormFields(event.target);
-  api.updateCheese(data)
-    .then(ui.updateCheeseSuccess)
+  api.updateCheeseplate(data)
+    .then(ui.updateCheeseplateSuccess)
     .catch(ui.failure);
 };
 
@@ -97,7 +98,7 @@ const addHandlers = () => {
   $('.get-all').on('click', onGetAllCheeses);
   // $('.get-one').on('click', onGetOneCheeseplate);
   $('.create-plate-form').on('submit', onCreateCheeseplate);
-  $('.update-cheese-form').on('submit', onUpdateCheese);
+  $('.newest-plates').on('submit', '.update-cheeseplate-form', onUpdateCheeseplate);
   // $('.change-cheeseplate-form').on('submit', onUpdateCheeseplate);
   // $('.change-name-of-last-cheese').on('click', '.delete-button', onDeleteCheese);
   $('.newest-plates').on('click', '.delete-cheeseplate-button', onDeleteCheeseplate);

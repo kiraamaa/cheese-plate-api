@@ -5,6 +5,16 @@
       <p>{{cheeseplate.name}}</p>
       <button type="button" class="delete-cheeseplate-button" data-cheeseplate-id="{{cheeseplate.id}}">Delete Cheeseplate</button>
     </li>
+    <li>
+      <div class="change-name-of-cheeseplate text-center">
+        <p class="lead"> Change the name of this cheese.</p>
+          <form class="update-cheeseplate-form" data-cheeseplate-id="{{cheeseplate.id}}">
+            <input type="text" class="cheeseplate-name" name="cheeseplate[name]" placeholder="New name">
+            <input type="text" class="cheeseplate-id" name="cheeseplate[id]" placeholder="Cheeseplate ID">
+            <button type="submit" class="change-cheeseplate-button btn btn-default">Submit</button>
+          </form>
+      </div>
+    </li>
   </ul>
 </div>
 {{/each}}

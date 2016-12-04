@@ -11,9 +11,9 @@ const getCheesesSuccess = (data) => {
   $('.cheeses-content').html(getCheeses(data));
 };
 
-const updateCheeseSuccess = (data) => {
+const updateCheeseplateSuccess = (data) => {
   console.log(data);
-  $('.cheeses-content').html(getCheeses(data));
+  $('.newest-plates').html(getCheeseplates(data));
 };
 
 // const deleteCheeseSuccess = () => {
@@ -62,7 +62,7 @@ const failure = () => {
 module.exports = {
   getCheesesSuccess,
   // getCheeseplateSuccess,
-  updateCheeseSuccess,
+  updateCheeseplateSuccess,
   // deleteCheeseSuccess,
   failure,
   createCheeseplateSuccess,
