@@ -1,5 +1,5 @@
 # Cheese Plate Generator
-https://kiraamaa.github.io/cheese-plate-app/<br>
+Deployed app: https://kiraamaa.github.io/cheese-plate-app/<br>
 
 Back end: https://github.com/kiraamaa/cheese-plate-generator-api
 
