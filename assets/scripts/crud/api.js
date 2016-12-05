@@ -26,27 +26,6 @@ const getAllCheeses = (data) =>
 //     data,
 //   });
 
-const updateCheeseplate = (data) =>
-$.ajax({
-  // url: 'https://hidden-lowlands-96809.herokuapp.com/cheeses/1',
-  url: app.host + '/cheeseplates/' + data.cheeseplate.id,
-  method: 'PATCH',
-  headers: {
-    Authorization: 'Token token=' + app.user.token,
-  },
-  data,
-});
-
-// const deleteCheese = (id) =>
-//   $.ajax({
-//     url: app.host + '/cheeses/' + id,
-//     // url: 'http://localhost:4741/cheeses/4',
-//     method: 'DELETE',
-//     // headers: {
-//     //   Authorization: "Token token=" + app.user.token,
-//     // },
-//   });
-
 
 
 // Cheeseplate functions
@@ -72,16 +51,17 @@ $.ajax({
     data,
   });
 
-  // const updateCheeseplate = (data) =>
-  // $.ajax({
-  //   url: 'http://localhost:4741/cheeseplates/1',
-  //   // url: app.host + '/cheeseplates/' + id,
-  //   method: 'PATCH',
-  //   // headers: {
-  //   //   Authorization: 'Token token=' + app.user.token,
-  //   // },
-  //   data,
-  // });
+
+  const updateCheeseplate = (data) =>
+  $.ajax({
+    // url: 'https://hidden-lowlands-96809.herokuapp.com/cheeses/1',
+    url: app.host + '/cheeseplates/' + data.cheeseplate.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data,
+  });
 
   const deleteCheeseplate = (id) =>
     $.ajax({
