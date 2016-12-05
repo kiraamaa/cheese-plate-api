@@ -1,7 +1,7 @@
 # Cheese Plate Generator
 Deployed app: https://kiraamaa.github.io/cheese-plate-app/<br>
 
-Back end: https://github.com/kiraamaa/cheese-plate-generator-api
+Back end repo: https://github.com/kiraamaa/cheese-plate-generator-api
 
 ## What It Is & How It Works
 
