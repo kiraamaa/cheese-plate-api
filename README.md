@@ -1,12 +1,33 @@
 # Cheese Plate Generator
+https://kiraamaa.github.io/cheese-plate-app/
 
-## Project Idea
+## What It Is & How It Works
 
-I wanted to design an app that generated sample cheese plates of 6 different cheeses given a certain flavor profile.
+I wanted to design an app that generated customizable cheese plates, and came up with this idea in my quest to find a good resource that would give me new cheeses to try for a dinner party or just in general.
 
-I came up with this idea in my quest to find a good resource that would give me new cheeses to try for a dinner party or just in general.
+This app currently works by generating new, empty cheeseplate objects and returning a list of various cheeses that exist in my SQL database. Users can currently create a new cheeseplate, change the name of a given cheeseplate, and delete a given cheeseplate.
 
-My ideal user base would be the 25-55 age range, namely individuals who are curious about cheese or are already self-described foodies and want to try new cheeses.
+I would like to enhance this app moving forward by allowing users to add cheeses to a given cheeseplate, and store representative cheese images in my database so that users have a better idea of what cheeses to choose.
+
+## Development Process
+
+1. Research app requirements and technologies.
+2. Write out user stories for app.
+3. Create wireframes for app using Sketch.
+4. Craft a list of necessary parts.
+5. Devise a version control workflow:
+  -   Branch large-scope features such as 'front-end' or 'back-end' off of 'master', and then branch smaller feature branches off of those.
+  -   Begin coding.
+  -   Revisit list of necessary parts needed.
+6. Revise version control workflow:
+  -   Create a 'development' branch and for each feature make a single branch off of it, then merge that branch back into 'development'.
+  -   Finally, merge back into 'master'. Also, create a 'to-do' list that is added to when coding and coming across issues or thinking of ideas, so that the focus is only on one problem at a time.
+7. Revise code, spending time focusing on the requirements as opposed to interesting problems that are unimportant.
+8. Once code is in a 'near-production' state, spend time working on testing as many possible use-cases as possible.
+9. Once satisfied with completion of tests, remove all debugger, console.log, and other WIP code.
+10. Deploy finalized project to GitHub Pages and test functionality again.
+11. Write README file based off of notes.
+12. Push final README to 'master' branch.
 
 ## User Stories
 
@@ -17,31 +38,8 @@ As a user I want to be able to remove cheeses from my cheese plate.<br>
 As a user I want to be able to add cheeses to my cheese plate.<br>
 As a user I want to be able to save cheese plates for future reference.<br>
 
-## Planning/ERD
-
-Cheeses, CheesePlates, and FlavorProfiles were my three tables.
-
-Cheeses have many CheesePlates through FlavorProfiles, and have an id, a name, and a description.
-
-CheesePlates have many Cheeses through FlavorProfiles, and have an id and a name.
-
-FlavorProfiles have one CheesePlate, amd  have a name and a reference to cheese_plate_id.
-
-(http://i.imgur.com/TFFjQcM.png)
-
-## Routing Requests
-
-Cheese to find a given cheese, cheeseplate to find a given cheese plate, and then flavor_profile to find corresponding cheese plates.
-
 ## Wireframes
 
 (http://i.imgur.com/rBw3UOL.png)<br>
 (http://i.imgur.com/ZSkNitH.jpg)<br>
 (http://i.imgur.com/R8mJ9x5.png)<br>
-
-## Timetable
-
-1. UI - ideally completed over break/ 1 day
-1. Authentication API - 1 day
-1. Cheese plate API - 2 days
-1. General clean-up/refinement - 1 day/weekend before submission
