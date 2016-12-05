@@ -3,6 +3,14 @@ Deployed app: https://kiraamaa.github.io/cheese-plate-app/<br>
 
 Back end repo: https://github.com/kiraamaa/cheese-plate-generator-api
 
+## Technologies Used
+
+-   Ruby on Rails
+-   Javascript
+-   HTML5
+-   CSS3
+-   Bootstrap
+
 ## What It Is & How It Works
 
 I wanted to design an app that generated customizable cheese plates, and came up with this idea in my quest to find a good resource that would give me new cheeses to try for a dinner party or just in general.
