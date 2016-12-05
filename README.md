@@ -50,6 +50,6 @@ As a user I want to be able to save cheese plates for future reference.<br>
 
 ## Wireframes
 
-(http://i.imgur.com/rBw3UOL.png)<br>
-(http://i.imgur.com/ZSkNitH.jpg)<br>
-(http://i.imgur.com/R8mJ9x5.png)<br>
+Landing page: http://i.imgur.com/rBw3UOL.png<br>
+Cheeese plate flavor quiz: http://i.imgur.com/ZSkNitH.jpg<br>
+Cheese plate quiz result:http://i.imgur.com/R8mJ9x5.png<br>
