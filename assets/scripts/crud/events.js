@@ -88,7 +88,11 @@ const onDeleteCheeseplate = function (event) {
   let id = $(this).data().cheeseplateId;
   console.log(id);
   api.deleteCheeseplate(id)
-    .then(ui.deleteCheeseplateSuccess)
+    .then((response_data) => {
+      ui.deleteCheeseplateSuccess(response_data);
+      return api.getAllCheeseplates();
+    })
+    .then(ui.getCheeseplatesSuccess)
     .catch(ui.failure);
 };
 
