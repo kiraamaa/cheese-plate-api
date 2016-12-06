@@ -16,6 +16,8 @@ const signInSuccess = (data) => {
   $('#myModal2').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
+  $('.change-pw').show();
+  $('.sign-out').show();
 };
 
 const failure = (error) => {
@@ -33,11 +35,14 @@ const changePassword = () => {
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
 };
-//
-// const signOutSuccess = () => {
-//   app.user = null;
-//   // console.log ('Signed out');
-// };
+
+const signOutSuccess = () => {
+  app.user = null;
+  console.log ('Signed out');
+  $('.newest-plates').hide();
+  $('.change-pw').hide();
+  $('.sign-out').hide();
+};
 
 
 module.exports = {
@@ -45,5 +50,5 @@ module.exports = {
   success,
   signInSuccess,
   changePassword,
-  // signOutSuccess
+  signOutSuccess
 };

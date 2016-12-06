@@ -31,14 +31,23 @@ const onGetAllCheeses = function () {
 
 const onUpdateCheeseplate = function (event) {
   event.preventDefault();
-  // let id = $(this).data().cheeseId;
+  let id = $(this).data().cheeseplateId;
   // let id = event.target.form.getAttribute("data-cheeseplate-id");
   console.log(event.target);
   let data = getFormFields(event.target);
-  api.updateCheeseplate(data)
+  // api.updateCheeseplate(data)
+  //   .then(ui.updateCheeseplateSuccess)
+  //   .catch(ui.failure);
+  api.updateCheeseplate(id, data)
+    .then((response_data) => {
+      ui.updateCheeseplateSuccess(response_data);
+      return api.getAllCheeseplates();
+    })
     .then(ui.updateCheeseplateSuccess)
     .catch(ui.failure);
 };
+
+
 
 // const onDeleteCheese = function (event) {
 //   event.preventDefault();

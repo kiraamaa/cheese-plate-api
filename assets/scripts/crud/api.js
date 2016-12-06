@@ -52,10 +52,10 @@ const getAllCheeses = (data) =>
   });
 
 
-  const updateCheeseplate = (data) =>
+  const updateCheeseplate = (id, data) =>
   $.ajax({
     // url: 'https://hidden-lowlands-96809.herokuapp.com/cheeses/1',
-    url: app.host + '/cheeseplates/' + data.cheeseplate.id,
+    url: app.host + '/cheeseplates/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token,

@@ -18,4 +18,6 @@ $(() => {
   $('.dropdown-toggle').dropdown();
   $('#begin-text').css("color", "white");
   $('.update-cheese-form').show();
+  $('.change-pw').hide();
+  $('.sign-out').hide();
 });
