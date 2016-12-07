@@ -8,6 +8,10 @@ const success = (data) => {
   $('#myModal3').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
+  $('.sign-up-message').hide();
+  $('.sign-in-message').show();
+  $('.newest-plates').show();
+  // $('.create-new').css('pointer-events', 'auto');
 };
 
 const signInSuccess = (data) => {
@@ -18,6 +22,11 @@ const signInSuccess = (data) => {
   $('.modal-backdrop').remove();
   $('.change-pw').show();
   $('.sign-out').show();
+  $('.sign-up-message').hide();
+  $('.sign-in-message').hide();
+  $('.create-new').show();
+  $('.newest-plates').show();
+  // $('.create-new').css('pointer-events', 'auto');
 };
 
 const failure = (error) => {
@@ -29,19 +38,31 @@ const failure = (error) => {
   $('.modal-backdrop').remove();
 };
 
-const changePassword = () => {
+const changePasswordSuccess = () => {
   console.log ('Password changed');
   $('#myModal3').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
 };
 
+// const failure = (error) => {
+//   console.error('failing');
+//   $('#myModal').modal('hide');
+//   $('#myModal2').modal('hide');
+//   $('#myModal3').modal('hide');
+//   $('body').removeClass('modal-open');
+//   $('.modal-backdrop').remove();
+// };
+
 const signOutSuccess = () => {
   app.user = null;
   console.log ('Signed out');
   $('.newest-plates').hide();
+  $('.list-group-item').hide();
   $('.change-pw').hide();
   $('.sign-out').hide();
+  $('.sign-up-message').show();
+  $('.create-new').hide();
 };
 
 
@@ -49,6 +70,6 @@ module.exports = {
   failure,
   success,
   signInSuccess,
-  changePassword,
+  changePasswordSuccess,
   signOutSuccess
 };

@@ -17,7 +17,10 @@ $(() => {
   crudEvents.addHandlers();
   $('.dropdown-toggle').dropdown();
   $('#begin-text').css("color", "white");
-  $('.update-cheese-form').show();
+  // $('.update-cheese-form').show();
   $('.change-pw').hide();
   $('.sign-out').hide();
+  $('.sign-in-message').hide();
+  $('.create-new').hide();
+  // $('.create-new').css('pointer-events', 'none');
 });
