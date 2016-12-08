@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require ('../app');
+// const getCheeses = require('../scripts/handlebars-templates/show-all-cheeses.handlebars');
 
 const success = (data) => {
   console.log(data);
@@ -26,6 +27,7 @@ const signInSuccess = (data) => {
   $('.sign-in-message').hide();
   $('.create-new').show();
   $('.newest-plates').show();
+  // $('.cheeses-content').html(getCheeses(data));
   // $('.create-new').css('pointer-events', 'auto');
 };
 

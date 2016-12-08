@@ -41,6 +41,7 @@ const onChangePassword = function (event) {
   $('#myModal3').modal("hide");
 };
 
+
 const addHandlers = () => {
   $('#myModal').on('submit', onSignUp);
   $('#myModal2').on('submit', onSignIn);
