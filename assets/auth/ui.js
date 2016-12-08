@@ -27,6 +27,7 @@ const signInSuccess = (data) => {
   $('.sign-in-message').hide();
   $('.create-new').show();
   $('.newest-plates').show();
+  $('.show-on-sign-in').show();
   // $('.cheeses-content').html(getCheeses(data));
   // $('.create-new').css('pointer-events', 'auto');
 };
@@ -65,6 +66,7 @@ const signOutSuccess = () => {
   $('.sign-out').hide();
   $('.sign-up-message').show();
   $('.create-new').hide();
+  $('.show-on-sign-in').hide();
 };
 
 

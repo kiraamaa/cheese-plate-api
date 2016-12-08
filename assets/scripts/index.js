@@ -22,5 +22,6 @@ $(() => {
   $('.sign-out').hide();
   $('.sign-in-message').hide();
   $('.create-new').hide();
+  $('.show-on-sign-in').hide();
   // $('.create-new').css('pointer-events', 'none');
 });
