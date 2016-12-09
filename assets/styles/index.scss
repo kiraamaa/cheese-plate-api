@@ -57,8 +57,8 @@ a:visited {
 
 .create-new {
   padding: 7px;
-  background-color: gray;
-  color: #fff;
+  // background-color: gray;
+  // color: #fff;
   // border: 2px solid #fff;
 }
 
@@ -155,5 +155,9 @@ h1 {
   margin-bottom: 15px;
   // background: white;
   background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
-  color: black;
+  color: white;
+}
+
+.add-cheese-button {
+  margin-bottom: 10px;
 }

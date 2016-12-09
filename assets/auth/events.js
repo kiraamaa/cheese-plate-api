@@ -16,17 +16,6 @@ const onSignUp = function (event) {
   $('#myModal').modal("hide");
 };
 
-// const onSignIn = function (event) {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   console.log(data);
-//   api.signIn(data)
-//     .then(ui.signInSuccess)
-//     .catch(ui.failure);
-//   console.log('click');
-//   $('#myModal2').modal("hide");
-// };
-
 const onSignIn = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -36,7 +25,11 @@ const onSignIn = function (event) {
       ui.signInSuccess(response_data);
       return capi.getAllCheeses();
     })
-    .then(cui.getCheesesSuccess)
+    .then((response_data) => {
+      cui.getCheesesSuccess(response_data);
+      return capi.getAllCheeseplates();
+    })
+    .then(cui.getCheeseplatesSuccess)
     .catch(ui.failure);
   console.log('click');
   $('#myModal2').modal("hide");

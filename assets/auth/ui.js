@@ -48,15 +48,6 @@ const changePasswordSuccess = () => {
   $('.modal-backdrop').remove();
 };
 
-// const failure = (error) => {
-//   console.error('failing');
-//   $('#myModal').modal('hide');
-//   $('#myModal2').modal('hide');
-//   $('#myModal3').modal('hide');
-//   $('body').removeClass('modal-open');
-//   $('.modal-backdrop').remove();
-// };
-
 const signOutSuccess = () => {
   app.user = null;
   console.log ('Signed out');

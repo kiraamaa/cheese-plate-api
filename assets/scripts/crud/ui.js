@@ -16,24 +16,10 @@ const updateCheeseplateSuccess = (data) => {
   $('.newest-plates').html(getCheeseplates(data));
 };
 
-// const deleteCheeseSuccess = () => {
-//   console.log('change-name-of-last-cheese');
-//   $('.change-name-of-last-cheese').html(deleteCheese(data));
-// };
-
-// const getCheeseplateSuccess = (data) => {
-//   console.log(data);
-// };
-
 const getCheeseplatesSuccess = (data) => {
   console.log(data);
   $('.newest-plates').html(getCheeseplates(data));
 };
-
-// const updateCheeseplateSuccess = (data) => {
-//   console.log(data);
-//   $('.newest-plates').html(getCheeseplates(data));
-// };
 
 const deleteCheeseplateSuccess = () => {
   console.log('change-name-of-last-cheese');
@@ -41,7 +27,6 @@ const deleteCheeseplateSuccess = () => {
 };
 
 const createCheeseplateSuccess = (data) => {
-  // debugger;
   console.log('create cheeseplate');
   $('#myModal4').modal('hide');
   $('body').removeClass('modal-open');
@@ -53,20 +38,12 @@ const failure = () => {
   console.error('failing');
 };
 
-// const signOutSuccess = () => {
-//   app.user = null;
-//   // console.log ('Signed out');
-// };
-
 
 module.exports = {
   getCheesesSuccess,
-  // getCheeseplateSuccess,
   updateCheeseplateSuccess,
-  // deleteCheeseSuccess,
   failure,
   createCheeseplateSuccess,
   getCheeseplatesSuccess,
-  // updateCheeseplateSuccess,
   deleteCheeseplateSuccess,
 };
