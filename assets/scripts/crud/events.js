@@ -23,7 +23,8 @@ const onGetAllCheeses = function () {
 const onUpdateCheeseplate = function (event) {
   event.preventDefault();
   let id = $(this).data().cheeseplateId;
-  console.log(event.target);
+  console.log(id);
+  debugger;
   let data = getFormFields(event.target);
   api.updateCheeseplate(id, data)
     .then((response_data) => {
@@ -73,7 +74,7 @@ const onDeleteCheeseplate = function (event) {
 
 const addHandlers = () => {
   $('.create-plate-form').on('submit', onCreateCheeseplate);
-  $('.newest-plates').on('submit', '.update-cheeseplate-form', onUpdateCheeseplate);
+  $('.newest-plates').on('submit', '.update-cheese-on-plate-form', onUpdateCheeseplate);
   $('.newest-plates').on('click', '.delete-cheeseplate-button', onDeleteCheeseplate);
   $('.get-plates').on('click', onGetAllCheeseplates);
  };

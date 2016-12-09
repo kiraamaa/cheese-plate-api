@@ -21,6 +21,11 @@ const getCheeseplatesSuccess = (data) => {
   $('.newest-plates').html(getCheeseplates(data));
 };
 
+// const getCheeseplateSuccess = (data) => {
+//   console.log(data);
+//   $('.newest-plates').html(getCheeseplates(data));
+// };
+
 const deleteCheeseplateSuccess = () => {
   console.log('change-name-of-last-cheese');
   $('.cheeseplate').html(getCheeseplates());
@@ -45,5 +50,6 @@ module.exports = {
   failure,
   createCheeseplateSuccess,
   getCheeseplatesSuccess,
+  // getCheeseplateSuccess,
   deleteCheeseplateSuccess,
 };
