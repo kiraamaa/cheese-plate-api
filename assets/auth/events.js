@@ -11,7 +11,19 @@ const onSignUp = function (event) {
   let data = getFormFields(event.target);
   event.preventDefault();
   api.signUp(data)
-    .then(ui.success)
+    .then((response_data) => {
+       ui.success(response_data);
+       return api.signIn(data);
+     })
+    .then((response_data) => {
+      ui.signInSuccess(response_data);
+      return capi.getAllCheeses();
+    })
+    .then((response_data) => {
+      cui.getCheesesSuccess(response_data);
+      return capi.getAllCheeseplates();
+    })
+    .then(cui.getCheeseplatesSuccess)
     .catch(ui.failure);
   $('#myModal').modal("hide");
 };
