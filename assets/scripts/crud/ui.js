@@ -14,11 +14,17 @@ const getCheesesSuccess = (data) => {
 const updateCheeseplateSuccess = (data) => {
   console.log(data);
   $('.newest-plates').html(getCheeseplates(data));
+  $('.cheesesOnPlateModal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
 };
 
 const getCheeseplatesSuccess = (data) => {
   console.log(data);
   $('.newest-plates').html(getCheeseplates(data));
+  $('.cheesesOnPlateModal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
 };
 
 // const getCheeseplateSuccess = (data) => {
@@ -37,6 +43,9 @@ const createCheeseplateSuccess = (data) => {
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
   $('.newest-plates').html(getCheeseplates(data));
+  // $('.cheesesOnPlateModal').modal('hide');
+  // $('.cheesesOnPlateModal').modal('hide');
+  // $('body').removeClass('modal-open');
 };
 
 const failure = () => {

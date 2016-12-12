@@ -127,9 +127,9 @@ input {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-// .contact-text {
-//   color: black;
-// }
+.contact-text {
+  color: #3d3d3d;
+}
 
 h1 {
   font-family: 'Lato', sans-serif;
@@ -160,4 +160,8 @@ h1 {
 
 .add-cheese-button {
   margin-bottom: 10px;
+}
+
+.fa {
+  color: #3d3d3d;
 }

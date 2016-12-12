@@ -22,9 +22,9 @@ const onGetAllCheeses = function () {
 
 const onUpdateCheeseplate = function (event) {
   event.preventDefault();
-  let id = $(this).data().cheeseplateId;
-  console.log(id);
-  debugger;
+  // let id = $(this).data().cheeseplateId;
+  let id = event.target.getAttribute('data-cheeseplate-id');
+  console.log("this is cheeseplate", id);
   let data = getFormFields(event.target);
   api.updateCheeseplate(id, data)
     .then((response_data) => {
