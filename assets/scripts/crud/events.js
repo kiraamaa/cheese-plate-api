@@ -75,6 +75,9 @@ const onDeleteCheeseplate = function (event) {
 const addHandlers = () => {
   $('.create-plate-form').on('submit', onCreateCheeseplate);
   $('.newest-plates').on('submit', '.update-cheese-on-plate-form', onUpdateCheeseplate);
+  // $('.newest-plates').on('click', '.add-cheese-button', function(){
+  //   $(this).modal("show");
+  // });
   $('.newest-plates').on('click', '.delete-cheeseplate-button', onDeleteCheeseplate);
   $('.get-plates').on('click', onGetAllCheeseplates);
  };
