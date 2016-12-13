@@ -1,10 +1,29 @@
 {{#each cheeses as |cheese|}}
-<ul class="list-group">
-  <li class="list-group-item">
-    <p class="lead text-center">{{cheese.name}}</p>
-    <p>{{cheese.description}}</p>
-  </li>
-</ul>
+  <div class="col-md-3">
+    <div class="col-md-12 inner text-center">
+      <p class="lead text-center">{{cheese.id}}. {{cheese.name}}</p>
+      <!--<p class="lead text-center">Cheese ID: {{cheese.id}}</p>-->
+      <p class="text-center">{{cheese.description}}</p>
+      <!--<button type="button" class="add-cheese-test-button btn btn-default" data-toggle="modal" data-target=".addCheeseModal" data-cheese-id="{{cheese.id}}">Add</button>-->
+    </div>
+  </div>
+  <!--<div class="modal fade text-center addCheeseModal" data-cheeseplate-id="{{cheeseplate.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title title-new-plate">Add a cheese</h4>
+        </div>
+        <div class="modal-body">
+            <form class="update-cheese-on-plate-form" data-cheeseplate-id="{{cheeseplate.id}}">
+              <input type="integer" min="1" max="20" step="1" class="new-plate-input form-control" name="cheese[id]" placeholder="Cheese ID">
+              <input type="hidden" name="cheese[add]" value="true">
+              <button type="submit" class="newest-plate btn btn-default">Submit{{cheeseplate.id}}</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>-->
   <!--<button type="button" class="update-button" data-cheese-id="{{cheese.id}}">Update Cheese</button>
   <input type="text" class="new-cheese-name" data-cheese-name="{{cheese.name}}" placeholder="New cheese name">-->
 {{/each}}

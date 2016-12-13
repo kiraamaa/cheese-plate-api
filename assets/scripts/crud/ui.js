@@ -14,23 +14,22 @@ const getCheesesSuccess = (data) => {
 const updateCheeseplateSuccess = (data) => {
   console.log(data);
   $('.newest-plates').html(getCheeseplates(data));
+  $('.cheesesOnPlateModal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+  $('.duplicate-cheese-message').hide();
 };
-
-// const deleteCheeseSuccess = () => {
-//   console.log('change-name-of-last-cheese');
-//   $('.change-name-of-last-cheese').html(deleteCheese(data));
-// };
-
-// const getCheeseplateSuccess = (data) => {
-//   console.log(data);
-// };
 
 const getCheeseplatesSuccess = (data) => {
   console.log(data);
   $('.newest-plates').html(getCheeseplates(data));
+  $('.cheesesOnPlateModal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+  $('.duplicate-cheese-message').hide();
 };
 
-// const updateCheeseplateSuccess = (data) => {
+// const getCheeseplateSuccess = (data) => {
 //   console.log(data);
 //   $('.newest-plates').html(getCheeseplates(data));
 // };
@@ -41,32 +40,35 @@ const deleteCheeseplateSuccess = () => {
 };
 
 const createCheeseplateSuccess = (data) => {
-  // debugger;
   console.log('create cheeseplate');
   $('#myModal4').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
   $('.newest-plates').html(getCheeseplates(data));
+  $('.duplicate-cheese-message').hide();
+  // $('.cheesesOnPlateModal').modal('hide');
+  // $('.cheesesOnPlateModal').modal('hide');
+  // $('body').removeClass('modal-open');
 };
 
 const failure = () => {
   console.error('failing');
 };
 
-// const signOutSuccess = () => {
-//   app.user = null;
-//   // console.log ('Signed out');
-// };
+const updateCheeseplateFailure = () => {
+  console.error('update failing');
+  $('.duplicate-cheese-message').show();
+  // alert("Please input a different cheese ID. Duplicate cheeses cannot be added to the same plate.");
+};
 
 
 module.exports = {
   getCheesesSuccess,
-  // getCheeseplateSuccess,
   updateCheeseplateSuccess,
-  // deleteCheeseSuccess,
   failure,
   createCheeseplateSuccess,
   getCheeseplatesSuccess,
-  // updateCheeseplateSuccess,
+  // getCheeseplateSuccess,
   deleteCheeseplateSuccess,
+  updateCheeseplateFailure,
 };

@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require ('../app');
+// const getCheeses = require('../scripts/handlebars-templates/show-all-cheeses.handlebars');
 
 const success = (data) => {
   console.log(data);
@@ -26,6 +27,10 @@ const signInSuccess = (data) => {
   $('.sign-in-message').hide();
   $('.create-new').show();
   $('.newest-plates').show();
+  $('.show-on-sign-in').show();
+  $('.sign-up-dropdown').hide();
+  $('.sign-in-dropdown').hide();
+  // $('.cheeses-content').html(getCheeses(data));
   // $('.create-new').css('pointer-events', 'auto');
 };
 
@@ -45,15 +50,6 @@ const changePasswordSuccess = () => {
   $('.modal-backdrop').remove();
 };
 
-// const failure = (error) => {
-//   console.error('failing');
-//   $('#myModal').modal('hide');
-//   $('#myModal2').modal('hide');
-//   $('#myModal3').modal('hide');
-//   $('body').removeClass('modal-open');
-//   $('.modal-backdrop').remove();
-// };
-
 const signOutSuccess = () => {
   app.user = null;
   console.log ('Signed out');
@@ -63,6 +59,9 @@ const signOutSuccess = () => {
   $('.sign-out').hide();
   $('.sign-up-message').show();
   $('.create-new').hide();
+  $('.show-on-sign-in').hide();
+  $('.sign-up-dropdown').show();
+  $('.sign-in-dropdown').show();
 };
 
 

@@ -57,8 +57,8 @@ a:visited {
 
 .create-new {
   padding: 7px;
-  background-color: gray;
-  color: #fff;
+  // background-color: gray;
+  // color: #fff;
   // border: 2px solid #fff;
 }
 
@@ -127,9 +127,9 @@ input {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-// .contact-text {
-//   color: black;
-// }
+.contact-text {
+  color: #3d3d3d;
+}
 
 h1 {
   font-family: 'Lato', sans-serif;
@@ -146,4 +146,22 @@ h1 {
 
 .container {
   vertical-align: middle;
+}
+
+.inner {
+  height: 400px;
+  border: 1px solid white;
+  vertical-align: middle;
+  margin-bottom: 15px;
+  // background: white;
+  background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
+  color: white;
+}
+
+// .add-cheese-button {
+//   margin-bottom: 10px;
+// }
+
+.fa {
+  color: #3d3d3d;
 }

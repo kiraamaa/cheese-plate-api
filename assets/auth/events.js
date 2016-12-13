@@ -3,13 +3,27 @@
 const getFormFields = require(`../../lib/get-form-fields.js`);
 const api = require('./api.js');
 const ui = require('./ui.js');
+const capi = require('../scripts/crud/api.js');
+const cui = require('../scripts/crud/ui.js');
 
 
 const onSignUp = function (event) {
   let data = getFormFields(event.target);
   event.preventDefault();
   api.signUp(data)
-    .then(ui.success)
+    .then((response_data) => {
+       ui.success(response_data);
+       return api.signIn(data);
+     })
+    .then((response_data) => {
+      ui.signInSuccess(response_data);
+      return capi.getAllCheeses();
+    })
+    .then((response_data) => {
+      cui.getCheesesSuccess(response_data);
+      return capi.getAllCheeseplates();
+    })
+    .then(cui.getCheeseplatesSuccess)
     .catch(ui.failure);
   $('#myModal').modal("hide");
 };
@@ -19,7 +33,15 @@ const onSignIn = function (event) {
   let data = getFormFields(event.target);
   console.log(data);
   api.signIn(data)
-    .then(ui.signInSuccess)
+    .then((response_data) => {
+      ui.signInSuccess(response_data);
+      return capi.getAllCheeses();
+    })
+    .then((response_data) => {
+      cui.getCheesesSuccess(response_data);
+      return capi.getAllCheeseplates();
+    })
+    .then(cui.getCheeseplatesSuccess)
     .catch(ui.failure);
   console.log('click');
   $('#myModal2').modal("hide");
@@ -40,6 +62,7 @@ const onChangePassword = function (event) {
     .catch(ui.failure);
   $('#myModal3').modal("hide");
 };
+
 
 const addHandlers = () => {
   $('#myModal').on('submit', onSignUp);

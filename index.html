@@ -67,7 +67,7 @@
 
 
   <!-- FullScreen -->
-    <div class="intro-header">
+  <div class="intro-header">
     <div class="col-xs-12 text-center abcen1">
       <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Cheese Plate Generator</h1>
       <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Discover your new favorite cheese plate</h3>
@@ -80,24 +80,24 @@
       </ul>
       <div class="go-to-button">
         <div class="button_down">
-          <a class="imgcircle" data-wow-duration="1.5s"  href="#createplate"> <img class="img_scroll" src="assets/styles/img/icon/circle.png" alt=""> </a>
+          <a class="imgcircle" data-wow-duration="1.5s"  href="#nav-menu"> <img class="img_scroll" src="assets/styles/img/icon/circle.png" alt=""> </a>
         </div>
       </div>
     </div>
 
-    </div>
-        <!-- /.container -->
+  </div>
+    <!-- /.container -->
 
 
   <!-- NavBar-->
   <nav class="navbar-default stuckMenu" role="navigation">
-    <div class="container">
+    <div class="container" id="nav-menu">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
+          <!--<span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>-->
         </button>
         <a class="navbar-brand" href="#home">Cheese Plate Generator</a>
       </div>
@@ -107,19 +107,18 @@
 
           <li class="menuItem"><a href="#cheeseplate">My Cheese Plates</a></li>
           <!--<li class="menuItem"><a href="#useit">Cheese Library</a></li>-->
-          <li class="menuItem"><a href="#createplate">Create A Cheese Plate</a></li>
           <li class="menuItem"><a href="#cheese-library">Cheese Library</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up/In<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li>
+              <li class="sign-up-dropdown">
                 <a>
                   <button type="button" class="sign-up-button" data-toggle="modal" data-target="#myModal">
                     Sign up
                   </button>
                 </a>
               </li>
-              <li>
+              <li class="sign-in-dropdown">
                 <a>
                   <button type="button" class="sign-in-button" data-toggle="modal" data-target="#myModal2">
                     Sign in
@@ -151,72 +150,6 @@
   </div>
   </nav>
 
-
-
-
-
-  <!-- My Cheese Plates -->
-  <div id="cheeseplate" class="content-section-b" style="border-top: 0">
-    <div class="container">
-
-      <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-        <p class="lead sign-up-message">Please sign up or sign in to view your cheese plates.</p>
-        <p class="lead sign-in-message">Please sign in to view your cheese plates.</p>
-        <h2>My Cheese Plates</h2>
-        <p class="lead" style="margin-top:0">View and edit your saved cheese plates <a href="#cheeseplate" class="get-plates">here.</a></p>
-        <!--<p class="lead" style="margin-top:0">Click <a class="create-new" role="button" data-toggle="modal" data-target="#myModal4">here</a> to create your first cheese plate.</p>-->
-
-
-        <div class="col-md-8 col-md-offset-2 newest-plates text-center">
-        </div>
-
-    </div>
-  </div>
-</div>
-
-  <!-- Cheese Plate Maker -->
-  <div id="createplate" class="banner">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-          <h2>Create A Unique Cheese Plate</h2>
-          <div class="new-cheeseplate-div">
-            <p class="lead sign-up-message">Please sign up or sign in to create a cheese plate.</p>
-            <p class="lead sign-in-message">Please sign in to create a cheese plate.</p>
-            <a class="create-new btn btn-default" role="button" data-toggle="modal" data-target="#myModal4">Craft my cheese plate</a>
-          </div>
-  <!-- create plate modal-->
-          <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title title-new-plate">Create a new plate</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="create-plate-form">
-                      <input type="text" class="new-plate-input form-control" name="cheeseplate[name]" placeholder="Cheese plate name">
-                      <!--<input type="submit">-->
-                      <button type="submit" class="newest-plate btn btn-default">Submit</button>
-                    </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--<div id="cheeseModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="//placehold.it/1000x600" class="img-responsive">
-                </div>
-            </div>
-          </div>
-        </div>-->
-       </div>
-      </div>
-    </div>
-
   <!-- Sign up modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -236,7 +169,9 @@
             <div class="form-group">
               <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword1" placeholder="Confirm password">
             </div>
-            <button type="submit" class="sign-up-submit btn btn-default">Submit</button>
+            <div class="text-right">
+              <button type="submit" class="sign-up-submit btn btn-default">Submit</button>
+            </div>
           </form>
         </div>
       </div>
@@ -244,8 +179,8 @@
   </div>
 
 
- <!-- Sign in modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!-- Sign in modal -->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -260,15 +195,17 @@
           <div class="form-group">
             <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
           </div>
-          <button type="submit" id="modal-submit-button" class="btn btn-default">Submit</button>
+          <div class="text-right">
+            <button type="submit" id="modal-submit-button" class="btn btn-default">Submit</button>
+          </div>
         </form>
       </div>
     </div>
   </div>
-</div>
+  </div>
 
-<!--Change password modal-->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!--Change password modal-->
+  <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -283,43 +220,73 @@
           <div class="form-group">
             <input type="password" name="passwords[new]" class="form-control" id="newPassword" placeholder="New password">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <div class="text-right">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
         </form>
       </div>
     </div>
+  </div>
+  </div>
+
+
+  <!-- My Cheese Plates -->
+  <div id="cheeseplate" class="content-section-b" style="border-top: 0">
+    <div class="container">
+
+      <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+        <h2>My Cheese Plates</h2>
+        <p class="lead sign-up-message">Please sign up or sign in to view your cheese plates.</p>
+        <p class="lead sign-in-message">Please sign in to view your cheese plates.</p>
+        <p class="lead show-on-sign-in" style="margin-top:0">View and edit your saved cheese plates here.</p>
+        <a class="create-new btn btn-default" role="button" data-toggle="modal" data-target="#myModal4">Craft a new cheese plate</a>
+        <!--<p class="lead" style="margin-top:0">Click <a class="create-new" role="button" data-toggle="modal" data-target="#myModal4">here</a> to create your first cheese plate.</p>-->
+
+        <!-- create plate modal-->
+         <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+           <div class="modal-dialog" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                   <h4 class="modal-title title-new-plate">Create a new plate</h4>
+               </div>
+               <div class="modal-body">
+                   <form class="create-plate-form">
+                     <input type="text" class="new-plate-input form-control" name="cheeseplate[name]" placeholder="Cheese plate name">
+                      <!--<input type="submit">-->
+                      <br>
+                     <button type="submit" class="btn btn-default">Submit</button>
+                   </form>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+
+    <div class="col-md-6 col-md-offset-3 newest-plates text-center">
+    </div>
+
   </div>
 </div>
 
-  <!-- Cheeses -->
-  <div id="cheese-library" class="content-section-a">
-    <div class="container">
-      <div class="row">
 
-      <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+
+  <!-- Cheeses -->
+  <div id="cheese-library" class="content-section-a banner">
+    <div class="col-md-12 text-center wrap_title">
+      <h2>Cheese Library</h2>
         <p class="lead sign-up-message">Please sign up or sign in to view the cheese library.</p>
         <p class="lead sign-in-message">Please sign in to view the cheese library.</p>
-        <h2>Cheese Library</h2>
-        <p class="lead" style="margin-top:0">Click <a href="#cheese-library" class="get-all">here</a> to view all available cheeses.</p>
-      </div>
-
-     <div class="col-md-6 col-md-offset-3 cheeses-content">
-     </div>
-
-      </div>
+        <p class="lead show-on-sign-in" style="margin-top:0">Add cheeses to you cheeseplate using the library below.</p>
     </div>
 
-    <!--<div class="change-name-of-last-cheese text-center">
-      <p class="lead"> Change the name of a random cheese below.</p>
-        <form class="update-cheese-form">
-          <input type="number" class="cheese-id" name="cheese[id]" placeholder="Cheese id">
-          <input type="text" class="cheese-name" name="cheese[name]" placeholder="New name">
-          <button type="submit" class="change-cheese-button btn btn-default">Submit</button>
-        </form>
-    </div>-->
+    <div class="container">
+     <div class="cheeses-content"></div>
+    </div>
   </div>
 
   <!-- Footer -->
-  <hr class="featurette-divider hidden-lg">
+<hr class="featurette-divider hidden-lg">
   <div class="col-md-12 footer">
     <div class="col-md-6 col-md-offset-3 text-center address">
       <address>
@@ -329,7 +296,6 @@
       Phone: 857-277-2977<br>
       </address>
 
-      <h3>Follow Kira</h3>
         <li class="social">
         <a href="https://www.facebook.com/KiraMaclean"><i class="fa fa-facebook-square fa-size"> </i></a>
         <a href="https://twitter.com/kiraamaa"><i class="fa  fa-twitter-square fa-size"> </i> </a>
@@ -337,15 +303,7 @@
         <a href="https://www.linkedin.com/in/kira-maclean"><i class="fa fa-linkedin-square fa-size"> </i> </a>
         </li>
     </div>
-  </div>
-
-
-
-
-
-
-
-
+</div>
 
 
     <!-- JavaScript -->
@@ -362,6 +320,7 @@
 
     });
     });
+    $('#cheeseplate').scrollTop($('#cheeseplate')[0].scrollHeight);
 
   </script>
   <!-- Smoothscroll -->
