@@ -23,5 +23,6 @@ $(() => {
   $('.sign-in-message').hide();
   $('.create-new').hide();
   $('.show-on-sign-in').hide();
+  $('.duplicate-cheese-message').hide();
   // $('.create-new').css('pointer-events', 'none');
 });

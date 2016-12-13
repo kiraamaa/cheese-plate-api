@@ -17,6 +17,7 @@ const updateCheeseplateSuccess = (data) => {
   $('.cheesesOnPlateModal').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
+  $('.duplicate-cheese-message').hide();
 };
 
 const getCheeseplatesSuccess = (data) => {
@@ -25,6 +26,7 @@ const getCheeseplatesSuccess = (data) => {
   $('.cheesesOnPlateModal').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
+  $('.duplicate-cheese-message').hide();
 };
 
 // const getCheeseplateSuccess = (data) => {
@@ -43,6 +45,7 @@ const createCheeseplateSuccess = (data) => {
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
   $('.newest-plates').html(getCheeseplates(data));
+  $('.duplicate-cheese-message').hide();
   // $('.cheesesOnPlateModal').modal('hide');
   // $('.cheesesOnPlateModal').modal('hide');
   // $('body').removeClass('modal-open');
@@ -50,6 +53,12 @@ const createCheeseplateSuccess = (data) => {
 
 const failure = () => {
   console.error('failing');
+};
+
+const updateCheeseplateFailure = () => {
+  console.error('update failing');
+  $('.duplicate-cheese-message').show();
+  // alert("Please input a different cheese ID. Duplicate cheeses cannot be added to the same plate.");
 };
 
 
@@ -61,4 +70,5 @@ module.exports = {
   getCheeseplatesSuccess,
   // getCheeseplateSuccess,
   deleteCheeseplateSuccess,
+  updateCheeseplateFailure,
 };

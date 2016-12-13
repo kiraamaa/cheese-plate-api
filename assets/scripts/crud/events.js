@@ -32,7 +32,7 @@ const onUpdateCheeseplate = function (event) {
       return api.getAllCheeseplates();
     })
     .then(ui.updateCheeseplateSuccess)
-    .catch(ui.failure);
+    .catch(ui.updateCheeseplateFailure);
 };
 
 const onGetAllCheeseplates = function () {
