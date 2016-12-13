@@ -12,6 +12,7 @@ const success = (data) => {
   $('.sign-up-message').hide();
   $('.sign-in-message').show();
   $('.newest-plates').show();
+  $('.cheeses-content').show();
   // $('.create-new').css('pointer-events', 'auto');
 };
 
@@ -30,6 +31,7 @@ const signInSuccess = (data) => {
   $('.show-on-sign-in').show();
   $('.sign-up-dropdown').hide();
   $('.sign-in-dropdown').hide();
+  $('.cheeses-content').show();
   // $('.cheeses-content').html(getCheeses(data));
   // $('.create-new').css('pointer-events', 'auto');
 };
@@ -62,6 +64,7 @@ const signOutSuccess = () => {
   $('.show-on-sign-in').hide();
   $('.sign-up-dropdown').show();
   $('.sign-in-dropdown').show();
+  $('.cheeses-content').hide();
 };
 
 
