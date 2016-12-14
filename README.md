@@ -1,7 +1,9 @@
 # Cheese Plate Generator
-Deployed app: https://kiraamaa.github.io/cheese-plate-app/<br>
+Deployed front end: https://kiraamaa.github.io/cheese-plate-app/<br>
+Deployed back end: https://hidden-lowlands-96809.herokuapp.com<br>
 
-Back end repo: https://github.com/kiraamaa/cheese-plate-generator-api
+Front end repository: https://github.com/kiraamaa/cheese-plate-app<br>
+Back end repository: https://github.com/kiraamaa/cheese-plate-generator-api
 
 ## Technologies Used
 
